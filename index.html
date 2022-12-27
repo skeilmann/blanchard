@@ -1,14 +1,116 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blanchard - художественная галерея</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+    <script defer src="./js/form.js"></script>
+  </head>
 
-<body>
-    
-</body>
+  <body>
+    <header class="header">
+      <div class="header__row-1">
+        <div class="container header__container">
+          <a class="logo" href="#"
+            ><img class="logo__img" src="./img/Лого.svg" alt="Logo"
+          /></a>
+          <div class="header__menu">
+            <ul class="list-reset header__nav">
+              <li class="header__nav-item">
+                <a href="#about" class="header__link">О нас</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#galery" class="header__link">Галерея</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#catalog" class="header__link">Каталог</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#events" class="header__link">События</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#projects" class="header__link">Проекты</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#contacts" class="header__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="header__btn">Войти</a>
+        </div>
+      </div>
+      <div class="header__row-2">
+        <div class="container header__container">
+          <ul class="list-reset header__nav-2">
+            <li class="header__nav-item-2">
+              <a href="#" class="header__link-2">Реализм</a>
+            </li>
+            <li class="header__nav-item-2">
+              <a href="#" class="header__link-2">Импрессионизм</a>
+            </li>
+            <li class="header__nav-item-2">
+              <a href="#" class="header__link-2">Постимпрессионизм</a>
+            </li>
+            <li class="header__nav-item-2">
+              <a href="#" class="header__link-2">Авангард</a>
+            </li>
+            <li class="header__nav-item-2">
+              <a href="#" class="header__link-2">Футуризм</a>
+            </li>
+          </ul>
+          <!-- <div class="nav__search-container">
+            <button
+              class="btn nav__search-btn js-open-search"
+              aria-label="Открыть поиск"
+              type="button"
+              role="searchbox"
+            ></button>
+            <form
+              class="nav__search-form js-form"
+              id="search-form"
+              role="searchbox"
+              action="/"
+              method="GET"
+            >
+              <input
+                class="nav__search-input"
+                aria-label="Искать на всём сайте"
+                type="search"
+                placeholder="Что будем искать?"
+                name="searching"
+              />
+              <button
+                class="btn nav__search-btn nav__search-btn--form"
+                type="submit"
+                aria-label="Начать поиск"
+              ></button>
+              <button
+                class="btn nav__delete-btn js-close"
+                type="button"
+                aria-label="очистить поиск"
+              ></button>
+            </form>
+          </div> -->
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h2 class="title hero__title">Прикоснитесь к прекрасному</h2>
+          <span class="hero__desc">Мы вынуждены отталкиваться от того, что реализация намеченных
+            плановых заданий создаёт предпосылки для новых предложений</span>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

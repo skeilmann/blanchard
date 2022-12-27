@@ -1,0 +1,24 @@
+:root {
+  /*colors*/
+  --black: #000000;
+  --dark-gray: #333333;
+  --gray: #666666;
+  --light-gray: #999999;
+  --light-acc: #d1a9f0;
+  --light-acc2: #c283f3;
+  --acc: #9d5cd0;
+  --dark-acc: #7943a4;
+  --green: #30bf39;
+  --blue: #26a5e4;
+  --red: #d11616;
+  --white: #ffffff;
+
+  /*fonts*/
+  --def-fw: 400;
+  --def-fs: 16px;
+  --def-lh: 32px;
+  --def-tc: #333333;
+
+  --s-bold: 600;
+  --bold: 700;
+}

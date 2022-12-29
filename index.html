@@ -10,12 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap"
     rel="stylesheet" />
-  <link href="./css/style.css" rel="stylesheet" />
   <link href="./img/favicon.svg" rel="icon" type="image/svg+xml" />
 
   <link rel="stylesheet" href="./css/choices.css">
   <script defer src="./js/choices.js"></script>
   <script defer src="./js/init-choices.js"></script>
+  <link href="./css/style.css" rel="stylesheet" />
 
 </head>
 
@@ -51,77 +51,79 @@
     </div>
     <div class="header__row-2">
       <div class="container header__container">
-        <ul class="list-reset header__nav-2">
-          <li class="header__nav-item-2">
-            <select class="select" name="select">
-              <option placeholder="">Реализм</option>
-              <option value="Выбор_1">Тинторетто</option>
-              <option value="Выбор_2">Фридрих</option>
-              <option value="Выбор_3">Леонардо</option>
-              <option value="Выбор_4">Верроккьо</option>
-              <option value="Выбор_5">Тинторетто</option>
-              <option value="Выбор_6">Леонардо</option>
-              <option value="Выбор_7">Леонардо</option>
-              <option value="Выбор_8">Леонардо</option>
-            </select>
-          </li>
-          <li class="header__nav-item-2">
-            <div class="choices__dropdown">
-              <div class="choices__enclosure task">
-                <select class="select" name="select">
-                  <option placeholder="">Импрессионизм</option>
-                  <option value="Выбор_1">Моне</option>
-                  <option value="Выбор_2">Сислей</option>
-                  <option value="Выбор_3">Мане</option>
-                  <option value="Выбор_4">Ренуар</option>
-                  <option value="Выбор_5">Ренуар</option>
-                  <option value="Выбор_6">Ренуар</option>
-                  <option value="Выбор_7">Ренуар</option>
-                  <option value="Выбор_8">Ренуар</option>
-                </select>
+        <div class="header__select-wrap">
+          <ul class="list-reset header__nav2">
+            <li class="header__nav2-item">
+              <select class="select" name="select">
+                <option placeholder="Realism">Реализм</option>
+                <option value="a-tintoretto">Тинторетто</option>
+                <option value="a-Fridrich">Фридрих</option>
+                <option value="a-Leonardo">Леонардо</option>
+                <option value="a-Verico">Верроккьо</option>
+                <option value="a-Tinto">Тинторетто</option>
+                <option value="a-Leo">Леонардо</option>
+                <option value="a-Leo2">Леонардо</option>
+                <option value="a-Leo3">Леонардо</option>
+              </select>
+            </li>
+            <li class="header__nav2-item">
+              <div class="choices__dropdown">
+                <div class="choices__enclosure task">
+                  <select class="select" name="select">
+                    <option placeholder="">Импрессионизм</option>
+                    <option value="a-mone">Моне</option>
+                    <option value="a-sisley">Сислей</option>
+                    <option value="a-mane">Мане</option>
+                    <option value="a-renuar">Ренуар</option>
+                    <option value="a-renuar2">Ренуар</option>
+                    <option value="a-renuar3">Ренуар</option>
+                    <option value="a-reanur4">Ренуар</option>
+                    <option value="a-reanur6">Ренуар</option>
+                  </select>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="header__nav-item-2">
-            <select class="select" name="select">
-              <option placeholder="">Постимпрессионизм</option>
-              <option value="Выбор_1">Ван Гог</option>
-              <option value="Выбор_2">Сезанн</option>
-              <option value="Выбор_3">Гоген</option>
-              <option value="Выбор_4">Сёра</option>
-              <option value="Выбор_5">Сёра</option>
-              <option value="Выбор_6">Сёра</option>
-              <option value="Выбор_7">Сёра</option>
-              <option value="Выбор_8">Сёра</option>
-            </select>
-          </li>
-          <li class="header__nav-item-2">
-            <select class="select" name="select">
-              <option placeholder="">Авангард</option>
-              <option value="Выбор_1">Кандинский</option>
-              <option value="Выбор_2">Маринетти</option>
-              <option value="Выбор_3">Малевич</option>
-              <option value="Выбор_4">Пикассо</option>
-              <option value="Выбор_5">Пикассо</option>
-              <option value="Выбор_6">Пикассо</option>
-              <option value="Выбор_7">Пикассо</option>
-              <option value="Выбор_8">Пикассо</option>
-            </select>
-          </li>
-          <li class="header__nav-item-2">
-            <select class="select" name="select">
-              <option placeholder="">Футуризм</option>
-              <option value="Выбор_1">Карра</option>
-              <option value="Выбор_2">Прателла</option>
-              <option value="Выбор_3">Северини</option>
-              <option value="Выбор_4">Балла</option>
-              <option value="Выбор_5">Балла</option>
-              <option value="Выбор_6">Балла</option>
-              <option value="Выбор_7">Балла</option>
-              <option value="Выбор_8">Балла</option>
-            </select>
-          </li>
-        </ul>
+            </li>
+            <li class="header__nav2-item">
+              <select class="select" name="select">
+                <option placeholder="">Постимпрессионизм</option>
+                <option value="a-van gogh">Ван Гог</option>
+                <option value="a-sessan">Сезанн</option>
+                <option value="a-gogen">Гоген</option>
+                <option value="a-sera">Сёра</option>
+                <option value="a-sera2">Сёра</option>
+                <option value="a-sera3">Сёра</option>
+                <option value="a-sera4">Сёра</option>
+                <option value="a-sera5">Сёра</option>
+              </select>
+            </li>
+            <li class="header__nav2-item">
+              <select class="select" name="select">
+                <option placeholder="">Авангард</option>
+                <option value="a-cand">Кандинский</option>
+                <option value="a-marineti">Маринетти</option>
+                <option value="a-malevich">Малевич</option>
+                <option value="a-picasso">Пикассо</option>
+                <option value="a-picasso2">Пикассо</option>
+                <option value="a-picasso3">Пикассо</option>
+                <option value="a-picasso4">Пикассо</option>
+                <option value="a-picasso5">Пикассо</option>
+              </select>
+            </li>
+            <li class="header__nav2-item">
+              <select class="select" name="select">
+                <option placeholder="">Футуризм</option>
+                <option value="a-carra">Карра</option>
+                <option value="a-pratela">Прателла</option>
+                <option value="a-severini">Северини</option>
+                <option value="a-bala">Балла</option>
+                <option value="a-bala2">Балла</option>
+                <option value="a-bala3">Балла</option>
+                <option value="a-bala4">Балла</option>
+                <option value="a-bala5">Балла</option>
+              </select>
+            </li>
+          </ul>
+        </div>
         <div class="nav__search-container">
           <button class="btn nav__search-btn js-open-search" aria-label="Открыть поиск" type="button" role="searchbox">
           </button>

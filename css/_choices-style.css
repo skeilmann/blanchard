@@ -1,29 +1,217 @@
-.choices__list--dropdown .is-selected {
-  display: none;
-}
-
-/* .choices__list--dropdown .choices__placeholder {
+/* .choices__list--dropdown .is-selected {
   display: none;
 } */
 
-/* .choices[data-type*=select-one]::after {
-  border: none;
-  margin-top: 0;
-  width: 15px;
-  height: 15px;
-  background-image: url("../down-arrow.svg");
-  background-position: center;
-  background-size: cover;
+.choices__list--dropdown .choices__placeholder {
+  display: none;
+}
+
+
+
+.choices__item--selectable::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #C283F366;
+  opacity: 0;
+  transition-: opacity 0.3s; */
+  background-image: linear-gradient(#C283F366 0 0);
+  background-size: 200%;
+  background-position: 200%;
   background-repeat: no-repeat;
-  transform: translateY(-50%);
-} */
-
-.choices.is-open[data-type*=select-one]::after {
-  margin-top: 0;
-  transform: translateY(-50%) rotate(180deg);
+  transition: background-size .4s, background-position .4s;
 }
 
-.choices__list.choices__list--dropdown.is-active {
-  height: 300px;
-  z-index: 1000;
+.is-highlighted.choices__item--selectable::before {
+  /* opacity: 1; */
+  transition: background-size .4s, background-position .4s;
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+.choices__item {
+  color: var(--white);
+}
+
+
+[data-value^="a-"] {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+[data-value="a-tintoretto"] {
+  background-image: url('../img/1920/header_m-0a.jpg');
+}
+
+[data-value="a-Fridrich"] {
+  background-image: url('../img/1920/header_m-0b.jpg');
+
+}
+
+[data-value="a-Leonardo"] {
+  background-image: url('../img/1920/header_m-0c.jpg');
+
+}
+
+[data-value="a-Verico"] {
+  background-image: url('../img/1920/header_m-0d.jpg');
+
+}
+
+[data-value="a-Tinto"] {
+  background-image: url('../img/1920/header_m-0a.jpg');
+
+}
+
+[data-value="a-Leo"] {
+  background-image: url('../img/1920/header_m-0b.jpg');
+
+}
+
+[data-value="a-Leo2"] {
+  background-image: url('../img/1920/header_m-0c.jpg');
+}
+
+[data-value="a-Leo3"] {
+  background-image: url('../img/1920/header_m-0d.jpg');
+
+}
+
+[data-value="a-mone"] {
+  background-image: url('../img/1920/header_m-1a.jpg');
+}
+
+[data-value="a-sisley"] {
+  background-image: url('../img/1920/header_m-1b.jpg');
+}
+
+[data-value="a-mane"] {
+  background-image: url('../img/1920/header_m-1c.jpg');
+}
+
+[data-value="a-renuar"] {
+  background-image: url('../img/1920/header_m-1d.jpg');
+}
+
+[data-value="a-renuar2"] {
+  background-image: url('../img/1920/header_m-1a.jpg');
+}
+
+[data-value="a-renuar3"] {
+  background-image: url('../img/1920/header_m-1b.jpg');
+}
+
+[data-value="a-renuar4"] {
+  background-image: url('../img/1920/header_m-1c.jpg');
+}
+
+[data-value="a-renuar5"] {
+  background-image: url('../img/1920/header_m-1d.jpg');
+}
+
+[data-value="a-renuar6"] {
+  background-image: url('../img/1920/header_m-1a.jpg');
+}
+
+[data-value="a-van gogh"] {
+  background-image: url('../img/1920/header_m-2a.jpg');
+}
+
+[data-value="a-sessan"] {
+  background-image: url('../img/1920/header_m-2b.jpg');
+}
+
+[data-value="a-gogen"] {
+  background-image: url('../img/1920/header_m-2c.jpg');
+}
+
+[data-value="a-sera"] {
+  background-image: url('../img/1920/header_m-2d.jpg');
+}
+
+[data-value="a-sera2"] {
+  background-image: url('../img/1920/header_m-2a.jpg');
+}
+
+[data-value="a-sera3"] {
+  background-image: url('../img/1920/header_m-2b.jpg');
+}
+
+[data-value="a-sera4"] {
+  background-image: url('../img/1920/header_m-2c.jpg');
+}
+
+[data-value="a-sera5"] {
+  background-image: url('../img/1920/header_m-2d.jpg');
+}
+
+[data-value="a-cand"] {
+  background-image: url('../img/1920/header_m-3a.jpg');
+}
+
+[data-value="a-marineti"] {
+  background-image: url('../img/1920/header_m-3b.jpg');
+}
+
+[data-value="a-malevich"] {
+  background-image: url('../img/1920/header_m-3c.jpg');
+}
+
+[data-value="a-picasso"] {
+  background-image: url('../img/1920/header_m-3d.jpg');
+}
+
+[data-value="a-picasso1"] {
+  background-image: url('../img/1920/header_m-3a.jpg');
+}
+
+[data-value="a-picasso2"] {
+  background-image: url('../img/1920/header_m-3b.jpg');
+}
+
+[data-value="a-picasso3"] {
+  background-image: url('../img/1920/header_m-3c.jpg');
+}
+
+[data-value="a-picasso4"] {
+  background-image: url('../img/1920/header_m-3d.jpg');
+}
+
+[data-value="a-picasso5"] {
+  background-image: url('../img/1920/header_m-3a.jpg');
+}
+
+[data-value="a-carra"] {
+  background-image: url('../img/1920/header_m-4a.jpg');
+}
+
+[data-value="a-pratela"] {
+  background-image: url('../img/1920/header_m-4b.jpg');
+}
+
+[data-value="a-severini"] {
+  background-image: url('../img/1920/header_m-4c.jpg');
+}
+
+[data-value="a-bala"] {
+  background-image: url('../img/1920/header_m-4d.jpg');
+}
+
+[data-value="a-bala2"] {
+  background-image: url('../img/1920/header_m-4a.jpg');
+}
+
+[data-value="a-bala3"] {
+  background-image: url('../img/1920/header_m-4b.jpg');
+}
+
+[data-value="a-bala4"] {
+  background-image: url('../img/1920/header_m-4c.jpg');
+}
+
+[data-value="a-bala5"] {
+  background-image: url('../img/1920/header_m-4d.jpg');
 }

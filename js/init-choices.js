@@ -3,7 +3,9 @@ const multiDefault = () => {
   elements.forEach(el => {
     const choices = new Choices(el, {
       searchEnabled: false,
-      itemSelectText: ''
+      itemSelectText: '',
+      shouldSort: false,
+      allowHTML: true
     });
 
   });

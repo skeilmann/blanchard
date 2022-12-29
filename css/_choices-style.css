@@ -2,9 +2,9 @@
   display: none;
 } */
 
-.choices__list--dropdown .choices__placeholder {
+/* .choices__list--dropdown .choices__placeholder {
   display: none;
-}
+} */
 
 
 
@@ -42,176 +42,176 @@
   background-size: cover;
 }
 
-[data-value="a-tintoretto"] {
+.choices__list--dropdown [data-value="a-tintoretto"] {
   background-image: url('../img/1920/header_m-0a.jpg');
 }
 
-[data-value="a-Fridrich"] {
+.choices__list--dropdown [data-value="a-Fridrich"] {
   background-image: url('../img/1920/header_m-0b.jpg');
 
 }
 
-[data-value="a-Leonardo"] {
+.choices__list--dropdown [data-value="a-Leonardo"] {
   background-image: url('../img/1920/header_m-0c.jpg');
 
 }
 
-[data-value="a-Verico"] {
+.choices__list--dropdown [data-value="a-Verico"] {
   background-image: url('../img/1920/header_m-0d.jpg');
 
 }
 
-[data-value="a-Tinto"] {
+.choices__list--dropdown [data-value="a-Tinto"] {
   background-image: url('../img/1920/header_m-0a.jpg');
 
 }
 
-[data-value="a-Leo"] {
+.choices__list--dropdown [data-value="a-Leo"] {
   background-image: url('../img/1920/header_m-0b.jpg');
 
 }
 
-[data-value="a-Leo2"] {
+.choices__list--dropdown [data-value="a-Leo2"] {
   background-image: url('../img/1920/header_m-0c.jpg');
 }
 
-[data-value="a-Leo3"] {
+.choices__list--dropdown [data-value="a-Leo3"] {
   background-image: url('../img/1920/header_m-0d.jpg');
 
 }
 
-[data-value="a-mone"] {
+.choices__list--dropdown [data-value="a-mone"] {
   background-image: url('../img/1920/header_m-1a.jpg');
 }
 
-[data-value="a-sisley"] {
+.choices__list--dropdown [data-value="a-sisley"] {
   background-image: url('../img/1920/header_m-1b.jpg');
 }
 
-[data-value="a-mane"] {
+.choices__list--dropdown [data-value="a-mane"] {
   background-image: url('../img/1920/header_m-1c.jpg');
 }
 
-[data-value="a-renuar"] {
+.choices__list--dropdown [data-value="a-renuar"] {
   background-image: url('../img/1920/header_m-1d.jpg');
 }
 
-[data-value="a-renuar2"] {
+.choices__list--dropdown [data-value="a-renuar2"] {
   background-image: url('../img/1920/header_m-1a.jpg');
 }
 
-[data-value="a-renuar3"] {
+.choices__list--dropdown [data-value="a-renuar3"] {
   background-image: url('../img/1920/header_m-1b.jpg');
 }
 
-[data-value="a-renuar4"] {
+.choices__list--dropdown [data-value="a-renuar4"] {
   background-image: url('../img/1920/header_m-1c.jpg');
 }
 
-[data-value="a-renuar5"] {
+.choices__list--dropdown [data-value="a-renuar5"] {
   background-image: url('../img/1920/header_m-1d.jpg');
 }
 
-[data-value="a-renuar6"] {
+.choices__list--dropdown [data-value="a-renuar6"] {
   background-image: url('../img/1920/header_m-1a.jpg');
 }
 
-[data-value="a-van gogh"] {
+.choices__list--dropdown [data-value="a-van gogh"] {
   background-image: url('../img/1920/header_m-2a.jpg');
 }
 
-[data-value="a-sessan"] {
+.choices__list--dropdown [data-value="a-sessan"] {
   background-image: url('../img/1920/header_m-2b.jpg');
 }
 
-[data-value="a-gogen"] {
+.choices__list--dropdown [data-value="a-gogen"] {
   background-image: url('../img/1920/header_m-2c.jpg');
 }
 
-[data-value="a-sera"] {
+.choices__list--dropdown [data-value="a-sera"] {
   background-image: url('../img/1920/header_m-2d.jpg');
 }
 
-[data-value="a-sera2"] {
+.choices__list--dropdown [data-value="a-sera2"] {
   background-image: url('../img/1920/header_m-2a.jpg');
 }
 
-[data-value="a-sera3"] {
+.choices__list--dropdown [data-value="a-sera3"] {
   background-image: url('../img/1920/header_m-2b.jpg');
 }
 
-[data-value="a-sera4"] {
+.choices__list--dropdown [data-value="a-sera4"] {
   background-image: url('../img/1920/header_m-2c.jpg');
 }
 
-[data-value="a-sera5"] {
+.choices__list--dropdown [data-value="a-sera5"] {
   background-image: url('../img/1920/header_m-2d.jpg');
 }
 
-[data-value="a-cand"] {
+.choices__list--dropdown [data-value="a-cand"] {
   background-image: url('../img/1920/header_m-3a.jpg');
 }
 
-[data-value="a-marineti"] {
+.choices__list--dropdown [data-value="a-marineti"] {
   background-image: url('../img/1920/header_m-3b.jpg');
 }
 
-[data-value="a-malevich"] {
+.choices__list--dropdown [data-value="a-malevich"] {
   background-image: url('../img/1920/header_m-3c.jpg');
 }
 
-[data-value="a-picasso"] {
+.choices__list--dropdown [data-value="a-picasso"] {
   background-image: url('../img/1920/header_m-3d.jpg');
 }
 
-[data-value="a-picasso1"] {
+.choices__list--dropdown [data-value="a-picasso1"] {
   background-image: url('../img/1920/header_m-3a.jpg');
 }
 
-[data-value="a-picasso2"] {
+.choices__list--dropdown [data-value="a-picasso2"] {
   background-image: url('../img/1920/header_m-3b.jpg');
 }
 
-[data-value="a-picasso3"] {
+.choices__list--dropdown [data-value="a-picasso3"] {
   background-image: url('../img/1920/header_m-3c.jpg');
 }
 
-[data-value="a-picasso4"] {
+.choices__list--dropdown [data-value="a-picasso4"] {
   background-image: url('../img/1920/header_m-3d.jpg');
 }
 
-[data-value="a-picasso5"] {
+.choices__list--dropdown [data-value="a-picasso5"] {
   background-image: url('../img/1920/header_m-3a.jpg');
 }
 
-[data-value="a-carra"] {
+.choices__list--dropdown [data-value="a-carra"] {
   background-image: url('../img/1920/header_m-4a.jpg');
 }
 
-[data-value="a-pratela"] {
+.choices__list--dropdown [data-value="a-pratela"] {
   background-image: url('../img/1920/header_m-4b.jpg');
 }
 
-[data-value="a-severini"] {
+.choices__list--dropdown [data-value="a-severini"] {
   background-image: url('../img/1920/header_m-4c.jpg');
 }
 
-[data-value="a-bala"] {
+.choices__list--dropdown [data-value="a-bala"] {
   background-image: url('../img/1920/header_m-4d.jpg');
 }
 
-[data-value="a-bala2"] {
+.choices__list--dropdown [data-value="a-bala2"] {
   background-image: url('../img/1920/header_m-4a.jpg');
 }
 
-[data-value="a-bala3"] {
+.choices__list--dropdown [data-value="a-bala3"] {
   background-image: url('../img/1920/header_m-4b.jpg');
 }
 
-[data-value="a-bala4"] {
+.choices__list--dropdown [data-value="a-bala4"] {
   background-image: url('../img/1920/header_m-4c.jpg');
 }
 
-[data-value="a-bala5"] {
+.choices__list--dropdown [data-value="a-bala5"] {
   background-image: url('../img/1920/header_m-4d.jpg');
 }

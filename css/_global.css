@@ -1,33 +1,34 @@
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-::before,
-::after {
-	box-sizing: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 img,
 svg {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 .visually-hidden {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
 }
 
 body {
@@ -37,6 +38,7 @@ body {
   font-weight: var(--def-fw);
   line-height: var(--def-lh);
   word-wrap: break-word;
+  scroll-behavior: smooth;
 }
 
 .list-reset {
@@ -52,10 +54,15 @@ body {
   font-weight: 700;
   line-height: 19px;
   color: var(--white);
-  background-color: #3F2AFF;
+  background-color: transparent;
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1700px;
   margin: 0 auto;
+  padding: 0 50px;
+}
+
+.title {
+  margin: 0;
 }

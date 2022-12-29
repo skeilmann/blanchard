@@ -1,0 +1,105 @@
+.nav__search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin-left: auto;
+}
+
+.nav__search-form {
+  position: relative;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  width: 221px;
+
+}
+
+.nav__search-input {
+  width: 100%;
+  padding-bottom: 6px;
+  border: none;
+  outline: none;
+  transition: border-color var(--short);
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  caret-color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nav__search-input::placeholder {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nav__search-input:focus-within::placeholder {
+  color: transparent;
+}
+
+.nav__search-input:focus-within {
+  border-color: var(--dark-acc);
+}
+
+.nav__search-input:hover {
+  border-color: var(--light-acc2);
+}
+
+.nav__search-input:active {
+  border-color: var(--acc);
+}
+
+:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nav__search-btn {
+  width: 30px;
+  height: 22px;
+  padding: 0;
+  transition: color var(--short);
+  background-image: url('../img/search.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+}
+
+.nav__delete-btn {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 200;
+  color: var(--white);
+  border: none;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 1024px) {
+  .nav__search-form.is-opened {
+    display: flex;
+    transform-origin: right;
+    animation-name: search-open;
+    animation-duration: 0.3s;
+  }
+
+  .nav__search-form.is-closed {
+    transform-origin: right;
+    animation-name: search-close;
+    animation-duration: 0.3s;
+  }
+}

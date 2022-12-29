@@ -1,0 +1,32 @@
+.hero__article {
+  position: relative;
+  z-index: 500;
+}
+
+.hero__bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: calc(-50vw + 50%);
+  width: 100vw;
+  min-height: 630px;
+  background-image: url(../img/1920/header_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 98px;
+  color: #ffffff;
+}
+
+.hero__desc {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #ffffff;
+}

@@ -13,6 +13,11 @@
   margin-right: 179px;
 }
 
+.logo:focus-visible {
+  outline: none;
+  background-color: var(--dark-acc);
+}
+
 .logo__img {
   vertical-align: middle;
 }
@@ -28,18 +33,56 @@
   font-weight: 600;
   line-height: 25px;
   color: var(--white);
+  transition: color .3s ease;
+}
+
+.header__link:hover {
+  color: var(--light-acc2)
+}
+
+.header__link:focus-visible {
+  outline: none;
+  background-color: var(--dark-acc);
+  color: var(--white);
+}
+
+.header__link:active {
+  color: var(--dark-acc)
 }
 
 .header__btn {
   display: inline-block;
   margin-left: auto;
-  padding-left: 20px;
+  padding-left: 12px;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
   color: var(--white);
   cursor: pointer;
   /* align-self: center; */
+  transition: color .3s ease;
+}
+
+.header__btn:hover {
+  color: var(--light-acc2)
+}
+
+.header__btn:focus-visible {
+  outline: none;
+  background-color: var(--dark-acc);
+  color: var(--white);
+}
+
+.header__btn:active {
+  color: var(--dark-acc)
+}
+
+.header__btn:hover::before {
+  filter: brightness(0) saturate(100%) invert(76%) sepia(38%) saturate(6151%) hue-rotate(220deg) brightness(97%) contrast(96%);
+}
+
+.header__btn:active::before {
+  filter: brightness(0) saturate(100%) invert(30%) sepia(15%) saturate(4272%) hue-rotate(242deg) brightness(93%) contrast(87%);
 }
 
 .header__btn::before {
@@ -50,6 +93,7 @@
   width: 14px;
   height: 14px;
   background-image: url("../img/login.svg");
+  /* transition: filter 0.3s ease; */
 }
 
 .header__row-2 {
@@ -66,22 +110,43 @@
 .header__link-2 {
   position: relative;
   display: inline-block;
-  padding-right: 10px;
+  padding-right: 20px;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
   color: var(--white);
+  transition: color .3s ease;
+}
+
+.header__link-2:hover,
+.header__link-2:hover::after {
+  color: var(--light-acc2);
+  border-color: var(--light-acc2);
+}
+
+.header__link-2:active,
+.header__link-2:active::after {
+  color: var(--dark-acc);
+  border-color: var(--dark-acc);
+}
+
+.header__link-2:focus-visible,
+.header__link-2:focus-visible::after {
+  background-color: var(--light-acc2);
+  outline: none;
 }
 
 .header__link-2::after {
   content: "";
   position: absolute;
-  top: 50%;
-  right: -2px;
+  top: 25%;
+  right: 0;
   display: inline-block;
   width: 7px;
   height: 7px;
   border-bottom: 1px solid #ffffff;
   border-left: 1px solid #ffffff;
-  transform: rotate(-45deg) translateY(-70%);
+  transform: rotate(-45deg);
+  transition-duration: .3s;
+  transition-property: border-color trasnform;
 }

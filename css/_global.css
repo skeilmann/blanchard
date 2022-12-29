@@ -48,13 +48,26 @@ body {
 }
 
 .btn {
-  padding: 20px 59px;
-  border-radius: var(--def-border-rad);
-  font-size: var(--def-fs);
+  display: block;
+  border: 2px var(--acc) solid;
+  border-radius: 100px;
+  padding: 20px 33px;
   font-weight: 700;
-  line-height: 19px;
-  color: var(--white);
-  background-color: transparent;
+  font-size: 18px;
+  line-height: 25px;
+  transition-property: background-color, outline, border-color;
+  transition-duration: .3s;
+}
+
+.btn:focus-visible:not(:active) {
+  outline: var(--light-acc2) 2px solid;
+  outline-offset: 2px;
+
+}
+
+.btn:active {
+  background-color: var(--dark-acc);
+  outline: var(--light-acc) 2px solid;
 }
 
 .container {

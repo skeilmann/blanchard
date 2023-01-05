@@ -28,16 +28,18 @@ svg {
   padding: 0;
   border: 0;
   white-space: nowrap;
+
   clip-path: inset(100%);
 }
 
 body {
   min-width: 320px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: var(--def-fs);
   font-weight: var(--def-fw);
   line-height: var(--def-lh);
   word-wrap: break-word;
+
   scroll-behavior: smooth;
 }
 
@@ -49,33 +51,41 @@ body {
 
 .btn {
   display: block;
+  padding: 20px 33px;
   border: 2px var(--acc) solid;
   border-radius: 100px;
-  padding: 20px 33px;
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
   line-height: 25px;
-  transition-property: background-color, outline, border-color;
   transition-duration: .3s;
+  transition-property: background-color, outline, border-color;
 }
 
 .btn:focus-visible:not(:active) {
   outline: var(--light-acc2) 2px solid;
   outline-offset: 2px;
-
 }
 
 .btn:active {
-  background-color: var(--dark-acc);
   outline: var(--light-acc) 2px solid;
+  background-color: var(--dark-acc);
 }
 
 .container {
   max-width: 1700px;
+  /* position: relative; */
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 80px 50px;
 }
 
 .title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+}
+
+p {
   margin: 0;
 }

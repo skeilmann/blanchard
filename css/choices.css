@@ -3,6 +3,7 @@
 =============================== */
 .choices {
   position: relative;
+  margin-left: -8px;
   /* transition: background-color .5s; */
   background-image: linear-gradient(var(--acc) 0 0);
   background-size: 200%;
@@ -140,10 +141,10 @@
   font-weight: 400;
 }
 
-.choices__list--single {
-  display: inline-block;
+
+.choices__list--single .choices__item--selectable {
   margin: 5px;
-  margin-left: 0;
+  margin-left: 7px;
   padding-right: 20px;
 }
 

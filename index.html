@@ -18,8 +18,7 @@
   <script src="./js/init-choices.js" defer></script>
   <script src="./js/swiper-bundle.js" defer></script>
   <script src="./js/init-swiper.js" defer></script>
-
-
+  <script src="./js/search.js" defer></script>
 
   <link href="./css/style.css" rel="stylesheet">
 
@@ -131,9 +130,9 @@
           </ul>
         </div>
         <div class="nav__search-container">
-          <button class="btn nav__search-btn js-open-search" type="button" role="searchbox" aria-label="Открыть поиск">
-          </button>
           <form id="search-form" class="nav__search-form js-form" role="searchbox" action="/" method="GET">
+            <button class="nav__search-btn js-open-search" type="button" role="searchbox" aria-label="Открыть поиск">
+            </button>
             <input class="nav__search-input" name="searching" type="text" aria-label="Искать на всём сайте"
               placeholder="Поиск по саиту">
             <button class="btn nav__delete-btn js-close" type="button" aria-label="очистить поиск">+</button>
@@ -153,23 +152,58 @@
             плановых заданий создаёт предпосылки для новых предложений</span>
           <button class="btn hero__btn">Подписаться на рассылку</button>
         </div>
-        <!-- <div class="hero__bg"></div> -->
-        <!-- Slider main container -->
         <div class="swiper">
-          <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-              <img class="swiper__img" src="./img/1920/header_bg.jpg" alt="#">
+              <picture>
+                <source media="(min-width:1500px)" srcset="./img/1920/header_bg.jpg">
+                <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                <img class="swiper__img" src="./img/1920/header_bg.jpg" alt="#">
+              </picture>
             </div>
             <div class="swiper-slide">
-              <img class="swiper__img" src="./img/1920/header_bg-2.jpg" alt="#">
+              <picture>
+                <source media="(min-width:1500px)" srcset="./img/1920/header_bg-2.jpg">
+                <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                <img class="swiper__img" src="./img/1920/header_bg-2.jpg" alt="#">
+              </picture>
             </div>
             <div class="swiper-slide">
-              <img class="swiper__img" src="./img/1920/header_bg-3.jpg" alt="#">
+              <picture>
+                <source media="(min-width:1500px)" srcset="./img/1920/header_bg-3.jpg">
+                <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                <img class="swiper__img" src="./img/1920/header_bg-3.jpg" alt="#">
+              </picture>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container about__container">
+        <h2 class="title">О нас</h2>
+        <p class="desc">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно
+          определяет
+          каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов
+          и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечёт за собой
+          процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество
+          позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных
+          мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных
+          стандартов, действия представителей оппозиции набирают популярность среди определённых слоёв населения,
+          а значит, должны быть разоблачены.</p>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="container">
+        <h2 class="title gallery__title">Галерея</h2>
+        <label class="choose-art" for="choose-art">Фильтр:</label>
+        <br>
+        <select name="art" id="choose-art">
+          <option value="paint">Живопись</option>
+          <option value="draw">Рисунок</option>
+          <option value="sculpt">Скульптура</option>
+        </select>
       </div>
     </section>
   </main>

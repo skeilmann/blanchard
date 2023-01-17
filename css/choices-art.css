@@ -1,0 +1,103 @@
+.gallery__select-wrap {
+  width: 400px;
+}
+
+.gallery__select-wrap .choices__inner {
+  position: relative;
+  z-index: 10;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  height: 40px;
+  padding-left: 15px;
+  padding-top: 2px;
+}
+
+
+.gallery__select-wrap .choices {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 0 0);
+  margin-left: 0;
+  /* padding: 5px; */
+  vertical-align: middle;
+}
+
+.gallery__select-wrap .choices__item--selectable::after {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 0 0);
+}
+
+.gallery__select-wrap .choices__inner:hover::after {
+  border-color: transparent var(--white) var(--white) transparent;
+}
+
+.gallery__select-wrap .choices__inner:active::after {
+  border-color: transparent var(--white) var(--white) transparent;
+}
+
+.gallery__select-wrap .choices[data-type*=select-one]::after:hover {
+  border-color: transparent var(--white) var(--white) transparent;
+}
+
+.gallery__select-wrap .choices__list--dropdown,
+.gallery__select-wrap .choices__list[aria-expanded] {
+  width: 400px;
+  height: auto;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.5);
+  top: 39px;
+  z-index: 1;
+}
+
+.gallery__select-wrap .choices__list--dropdown .choices__list,
+.gallery__select-wrap .choices__list[aria-expanded] .choices__list {
+  overflow-y: hidden;
+  padding-right: 0;
+}
+
+.gallery__select-wrap .choices__list--dropdown {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.gallery__select-wrap .choices__list--dropdown .choices__item,
+.gallery__select-wrap .choices__list[aria-expanded] .choices__item {
+  margin-bottom: 0;
+  padding: 0;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+}
+
+.gallery__select-wrap .choices__list--single .choices__item:hover {
+  color: var(--white);
+}
+
+.gallery__select-wrap .choices__list--single .choices__item:active {
+  color: var(--white);
+}
+
+.gallery__select-wrap .choices__list--single .choices__item--selectable {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__select-wrap .choices__list--dropdown .choices__item.is-selected {
+  display: none;
+}
+
+.gallery__select-wrap .choices__list--dropdown .choices__item {
+  color: var(--light-gray);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  transition: color .5s;
+}
+
+.gallery__select-wrap .choices__list--dropdown .choices__item:hover {
+  color: var(--white);
+}
+
+
+.gallery__select-wrap .choices__list--single .choices__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}

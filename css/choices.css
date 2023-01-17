@@ -106,12 +106,13 @@
   pointer-events: none;
   transform: rotate(45deg);
   transition-property: border-color, transform;
-  transition-duration: .3s;
-  transform-origin: center;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+  transform-origin: 80% 80%;
 }
 
 .choices.is-open .choices__inner::after {
-  transform: rotate(225deg);
+  transform: rotate(585deg);
 }
 
 .choices__inner:hover::after {
@@ -159,7 +160,6 @@
   background: rgba(0, 0, 0, 0.5);
   top: 50px;
   word-break: break-all;
-
   opacity: 0;
   transform: translateY(-10%);
   transition-property: transform, opacity;

@@ -8,7 +8,7 @@
   <title>Blanchard - художественная галерея</title>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
   <link type="image/svg+xml" href="./img/favicon.svg" rel="icon">
 
@@ -19,6 +19,7 @@
   <script src="./js/swiper-bundle.js" defer></script>
   <script src="./js/init-swiper.js" defer></script>
   <script src="./js/search.js" defer></script>
+  <script src="./js/image-popup.js" defer></script>
 
   <link href="./css/style.css" rel="stylesheet">
 
@@ -141,9 +142,6 @@
 
       </div>
     </div>
-  </header>
-
-  <main>
     <section class="hero">
       <div class="container">
         <div class="hero__article">
@@ -152,7 +150,7 @@
             плановых заданий создаёт предпосылки для новых предложений</span>
           <button class="btn hero__btn">Подписаться на рассылку</button>
         </div>
-        <div class="swiper">
+        <div class="swiper-1 swiper">
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
@@ -180,6 +178,9 @@
         </div>
       </div>
     </section>
+  </header>
+
+  <main>
     <section class="about">
       <div class="container about__container">
         <h2 class="title">О нас</h2>
@@ -195,18 +196,197 @@
       </div>
     </section>
     <section class="gallery">
-      <div class="container">
-        <h2 class="title gallery__title">Галерея</h2>
-        <label class="choose-art" for="choose-art">Фильтр:</label>
-        <br>
-        <select name="art" id="choose-art">
-          <option value="paint">Живопись</option>
-          <option value="draw">Рисунок</option>
-          <option value="sculpt">Скульптура</option>
-        </select>
+      <div class="container gallery__container">
+        <div class="gallery__left">
+          <h2 class="title gallery__title">Галерея</h2>
+          <div class="gallery__select-wrap">
+            <label class="choose-art" for="choose-art">Фильтр:</label>
+            <br>
+            <select class="select" name="art" id="choose-art">
+              <option value="paint">Живопись</option>
+              <option value="draw">Рисунок</option>
+              <option value="sculpt">Скульптура</option>
+            </select>
+          </div>
+          <div class="gallery__choose-wrap">
+            <label class="gallery__choose-item">XIX век
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="gallery__choose-item">XX век
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="gallery__choose-item">Современность
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="gallery__right">
+          <div class="pagination">
+            <div class="swiper-nav-btn swiper-nav-btn-left"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-nav-btn swiper-nav-btn-right"></div>
+          </div>
+          <div class="swiper-2 swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <picture>
+                    <source media="(min-width:1500px)" srcset="./img/1920/gallery__1.jpg">
+                    <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                    <img class="swiper__img" src="./img/1920/gallery__bg.jpg" alt="#"
+                      onclick="openModal();currentSlide(1)">
+                  </picture>
+                </div>
+
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(min-width:1500px)" srcset="./img/1920/gallery__2.jpg">
+                  <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                  <img class="swiper__img" src="./img/1920/gallery__2.jpg" alt="#"
+                    onclick="openModal();currentSlide(2)">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(min-width:1500px)" srcset="./img/1920/gallery__3.jpg">
+                  <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                  <img class="swiper__img" src="./img/1920/gallery__3.jpg" alt="#"
+                    onclick="openModal();currentSlide(3)">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(min-width:1500px)" srcset="./img/1920/gallery__4.jpg">
+                  <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                  <img class="swiper__img" src="./img/1920/gallery__4.jpg" alt="#"
+                    onclick="openModal();currentSlide(4)">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <picture>
+                    <source media="(min-width:1500px)" srcset="./img/1920/gallery__5.jpg">
+                    <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                    <img class="swiper__img" src="./img/1920/gallery__5.jpg" alt="#"
+                      onclick="openModal();currentSlide(5)">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <picture>
+                    <source media="(min-width:1500px)" srcset="./img/1920/gallery__6.jpg">
+                    <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                    <img class="swiper__img" src="./img/1920/gallery__6.jpg" alt="#"
+                      onclick="openModal();currentSlide(6)">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-view" id="myModal">
+            <div class="card">
+              <div class="card__img">
+                <img src="./img/1920/popup__img-1.jpg" alt="#">
+              </div>
+              <div class="card__about">
+                <h3 class="card__title">Казимир Малевич</h3>
+                <div class="card__subtitle">«Торс»</div>
+                <div class="card__year">1929</div>
+                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                  после Берлинской и Варшавской выставок в 1927 году.</p>
+              </div>
+              <button class="card__close" onclick="closeModal()">&times</button>
+            </div>
+
+            <div class="card">
+              <div class="card__img">
+                <img src="./img/1920/popup__img-2.jpg" alt="#">
+              </div>
+              <div class="card__about">
+                <h3 class="card__title">Казимир Малевич</h3>
+                <div class="card__subtitle">«Женщина с граблями»</div>
+                <div class="card__year">1931–1932</div>
+                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                  после Берлинской и Варшавской выставок в 1927 году.</p>
+              </div>
+              <button class="card__close" onclick="closeModal()">&times</button>
+            </div>
+
+            <div class="card">
+              <div class="card__img">
+                <img src="./img/1920/popup__img-3.jpg" alt="#">
+              </div>
+              <div class="card__about">
+                <h3 class="card__title">Казимир Малевич</h3>
+                <div class="card__subtitle">«Taking in the Harvest»</div>
+                <div class="card__year">1911</div>
+                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                  после Берлинской и Варшавской выставок в 1927 году.</p>
+              </div>
+              <button class="card__close" onclick="closeModal()">&times</button>
+            </div>
+
+            <div class="card">
+              <div class="card__img">
+                <img src="./img/1920/popup__img-4.jpg" alt="#">
+              </div>
+              <div class="card__about">
+                <h3 class="card__title">Казимир Малевич</h3>
+                <div class="card__subtitle">«Suprematism»</div>
+                <div class="card__year">1915</div>
+                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                  после Берлинской и Варшавской выставок в 1927 году.</p>
+              </div>
+              <button class="card__close" onclick="closeModal()">&times</button>
+            </div>
+
+            <div class="card">
+              <div class="card__img">
+                <img src="./img/1920/popup__img-5.jpg" alt="#">
+              </div>
+              <div class="card__about">
+                <h3 class="card__title">Казимир Малевич</h3>
+                <div class="card__subtitle">«Peasant woman»</div>
+                <div class="card__year">1912</div>
+                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                  после Берлинской и Варшавской выставок в 1927 году.</p>
+              </div>
+              <button class="card__close" onclick="closeModal()">&times</button>
+            </div>
+
+            <div class="card">
+              <div class="card__img">
+                <img src="./img/1920/popup__img-6.jpg" alt="#">
+              </div>
+              <div class="card__about">
+                <h3 class="card__title">Казимир Малевич</h3>
+                <div class="card__subtitle">«Suprematism»</div>
+                <div class="card__year">1916</div>
+                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                  после Берлинской и Варшавской выставок в 1927 году.</p>
+              </div>
+              <button class="card__close" onclick="closeModal()">&times</button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   </main>
+
 </body>
 
 </html>

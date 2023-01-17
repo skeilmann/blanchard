@@ -330,7 +330,7 @@
 .swiper-pagination-custom,
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 10px;
+  /* bottom: 10px; */
   left: 0;
   width: 100%;
 }
@@ -563,6 +563,7 @@ button.swiper-pagination-bullet {
 
 .swiper-slide-zoomed {
   cursor: move;
+  position: absolute;
 }
 
 /* Preloader */

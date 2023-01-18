@@ -22,7 +22,7 @@ const swiper2 = new Swiper('.swiper-2', {
   slidesPerGroup: 3,
   watchSlidesVisibility: false,
   watchSlidesProgress: false,
-  allowTouchMove: false,
+
 
   pagination: {
     el: '.swiper-pagination',
@@ -44,3 +44,18 @@ const swiper2 = new Swiper('.swiper-2', {
 
 });
 
+const swiper3 = new Swiper('.swiper-3', {
+  // Optional parameters
+  direction: 'horizontal',
+  spaceBetween: 50,
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  watchSlidesVisibility: false,
+  watchSlidesProgress: false,
+
+
+  navigation: {
+    nextEl: ".swiper-nav-btn-right",
+    prevEl: ".swiper-nav-btn-left",
+  },
+});

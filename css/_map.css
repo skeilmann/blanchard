@@ -1,0 +1,125 @@
+#myMap1 {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.map__wrap {
+  width: 100%;
+}
+
+
+
+.ymaps-2-1-79-zoom {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  border-radius: 7px !important;
+  padding: 0 !important;
+  width: 40px !important;
+  height: 80px !important;
+  display: inline-block !important;
+  background-color: #fff !important;
+}
+
+.ymaps-2-1-79-zoom__icon {
+  opacity: 0 !important;
+}
+
+
+.ymaps-2-1-79-float-button {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.ymaps-2-1-79-zoom__plus {
+  border-radius: 0 !important;
+  border-top-left-radius: 7px !important;
+  border-top-right-radius: 7px !important;
+}
+
+.ymaps-2-1-79-zoom__plus::before {
+  content: "+";
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  color: var(--dark-gray);
+  position: absolute;
+  transform: translate3d(-12%, -25%, 0);
+}
+
+.ymaps-2-1-79-zoom__minus {
+  border-radius: 0 !important;
+  border-bottom-left-radius: 7px !important;
+  border-bottom-right-radius: 7px !important;
+}
+
+.ymaps-2-1-79-zoom__minus::before {
+  content: "_";
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  color: var(--dark-gray);
+  position: absolute;
+  transform: translate3d(-12%, -55%, 0);
+}
+
+
+
+
+.ymaps-2-1-79-_hidden-text {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  width: 40px;
+  height: 40px;
+  /* padding: 10px; */
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 7px !important;
+
+
+
+
+}
+
+.ymaps-2-1-79-_hidden-text::before {
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/gps-arrow.svg");
+  filter: opacity(70%);
+}
+
+.ymaps-2-1-79-float-button-icon_icon_geolocation {
+  background-image: none;
+  opacity: 0;
+}
+
+.ymaps-2-1-79-controls-pane {
+  width: 40px !important;
+  margin-right: 20px !important;
+  right: 0;
+  left: unset !important;
+}
+
+.ymaps-2-1-79-controls__toolbar {
+  top: 350px;
+}
+
+.ymaps-2-1-79-controls__control {
+  top: 270px !important;
+}

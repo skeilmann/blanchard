@@ -1,0 +1,121 @@
+.project__desc {
+  max-width: 1080px;
+}
+
+.project__more:hover {
+  color: var(--acc);
+}
+
+.project__more:active {
+  color: var(--dark-acc);
+}
+
+.project__more::after {
+  width: 105%;
+  left: -4px;
+}
+
+.project__more::before {
+  background-color: transparent;
+  bottom: -3px;
+}
+
+.project__more:focus-visible:before {
+  background-color: transparent;
+
+}
+
+.project__more:hover:before {
+  background-color: var(--acc);
+}
+
+.project__more:active::before {
+  background-color: var(--dark-acc);
+}
+
+.project__swiper {
+  position: relative;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.project__swiper .pagination {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+.project .swiper-nav-btn {
+  background-color: var(--light-gray2);
+  transition: outline .3s, background-color .3s;
+}
+
+.project .swiper-nav-btn::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 7px;
+  height: 7px;
+  border-bottom: 1px solid var(--dark-gray);
+  border-left: 1px solid var(--dark-gray);
+}
+
+.project .swiper-btn-left::after {
+  transform: rotate(45deg);
+}
+
+.project .swiper-btn-right::after {
+  transform: rotate(-135deg);
+}
+
+.swiper-4__img {
+  filter: saturate(0) opacity(50%);
+  transition: filter .3s;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project .swiper-nav-btn:focus-visible {
+  outline: 2px solid var(--acc);
+}
+
+.project .swiper-btn-right.swiper-button-disabled:focus-visible {
+  outline: none;
+}
+
+.project .swiper-nav-btn:hover {
+  background-color: var(--light-acc);
+}
+
+.project .swiper-nav-btn:active {
+  outline: 2px solid var(--acc);
+  background-color: var(--light-acc);
+}
+
+.project .swiper-button-disabled::after {
+  border-color: var(--light-gray3);
+}
+
+.swiper-4 .swiper-slide {
+  border: 1px solid var(--light-gray2);
+  max-height: 152px;
+  box-sizing: border-box;
+  transition: border-color .3s;
+}
+
+.swiper-4 .swiper-slide:hover .swiper-4__img,
+.swiper-4 .swiper-slide:active .swiper-4__img {
+  filter: saturate(100%) opacity(1);
+}
+
+.swiper-4 .swiper-slide:active,
+.swiper-4 .swiper-slide:focus-visible {
+  outline: none;
+  border-color: var(--acc);
+}

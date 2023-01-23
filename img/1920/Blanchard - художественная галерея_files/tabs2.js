@@ -1,7 +1,7 @@
 const firstParams = {
   tabsClass: "js-link",
-  wrap: "js-catalog-wrap",
-  content: "js-catalog-content",
+  wrap: "js-steps-wrap",
+  content: "js-step-content",
   active: "active"
 };
 

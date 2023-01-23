@@ -35,11 +35,10 @@ svg {
 body {
   min-width: 320px;
   font-family: "Open Sans", sans-serif;
-  font-size: var(--def-fs);
+  /* font-size: var(--def-fs); */
   font-weight: var(--def-fw);
   line-height: var(--def-lh);
   word-wrap: break-word;
-
   scroll-behavior: smooth;
 }
 

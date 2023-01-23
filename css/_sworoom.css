@@ -1,0 +1,40 @@
+.showroom__container {
+  display: flex;
+  gap: 80px;
+}
+
+.showroom__subtitle {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+address {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--dark-gray);
+  font-style: normal;
+}
+
+.showroom__icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon--wa {
+  background-image: url("../img/1920/Whatsapp-Icon.jpg");
+}
+
+.icon--tg {
+  background-image: url("../img/1920/tg-Icon.jpg");
+}

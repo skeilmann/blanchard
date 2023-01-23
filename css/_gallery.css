@@ -28,7 +28,6 @@
 .gallery__choose-item {
   position: relative;
   display: inline-block;
-  width: 100%;
   padding-left: 20px;
   color: var(--white);
   cursor: pointer;

@@ -80,7 +80,7 @@
   outline: none;
 }
 
-.choices:focus:not(:hover) {
+.choices:focus-visible:not(:hover) {
   /* background-color: var(--dark-acc); */
   transition: background-size .4s, background-position .4s;
   background-size: 200% 100%;

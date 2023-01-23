@@ -23,6 +23,7 @@
   height: 50px;
   background-color: var(--light-gray2);
   pointer-events: all;
+  transition: background-color .3s;
 }
 
 .event .swiper-nav-btn::after {

@@ -4,9 +4,9 @@ const swiper1 = new Swiper('.swiper-1', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000,
+  },
   effect: 'fade',
   fadeEffect: {
     crossFade: true
@@ -39,21 +39,19 @@ const swiper2 = new Swiper('.swiper-2', {
   a11y: {
     prevSlideMessage: 'Previous slide',
     nextSlideMessage: 'Next slide',
-  },
+  }
 
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
+});
 
+swiper2.$el.on("keydown", (e) => {
+  if (e.keyCode !== 13 && e.keyCode !== 32) return;
 
-  // Setting minimum and maximum zoom ration
-  zoom: {
-    maxRatio: 1.5,
-    minRation: 1,
-    // toggle: false,
-  },
+  var slideIndex = e.target.dataset.slideIndex;
 
+  if (!slideIndex) return;
+
+  galleryThumbs.slideTo(slideIndex);
+  galleryTop.slideTo(slideIndex);
 });
 
 const swiper3 = new Swiper('.swiper-3', {

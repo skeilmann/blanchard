@@ -249,26 +249,46 @@
   opacity: 0;
 }
 
-.popup-view {
-  position: fixed;
+.modal {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
   z-index: 1000;
+  /* opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20%); */
+}
+
+.modal.is-open {
+  display: block;
+  /* opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0); */
+}
+
+
+.modal__overlay {
+  position: fixed;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  display: none;
-  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, .5);
+  align-items: center;
 }
 
 .card {
   position: relative;
-  display: none;
+  display: flex;
   width: 900px;
   height: 500px;
   background: var(--white);
   box-shadow: 10px 10px 80px #000000;
+  overflow-y: hidden;
+  box-sizing: border-box;
 }
 
 .card__img {
@@ -355,4 +375,76 @@ picture {
 
 .swiper-zoom-container:focus-visible:before {
   opacity: 1;
+}
+
+
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mmslideIn {
+  from {
+    transform: translateY(15%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-10%);
+  }
+}
+
+.modal[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.modal[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.modal[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.modal[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.modal .modal__container,
+.modal .modal__overlay {
+  will-change: transform;
+}
+
+.swiper-zoom-container {
+  padding: 0;
+  border: none;
+  cursor: pointer;
 }

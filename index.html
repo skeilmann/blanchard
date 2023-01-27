@@ -66,7 +66,7 @@
             </li>
           </ul>
         </div>
-        <a class="header__btn" data-micromodal-trigger="modal-1" data-custom-open="modal-1">Войти</a>
+        <a class="header__btn" href="#">Войти</a>
       </div>
     </div>
     <div class="header__row-2">
@@ -256,163 +256,191 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide">
-                <div class="swiper-zoom-container" tabindex="0" onclick="openModal();currentSlide(1)">
+                <button class="swiper-zoom-container" data-micromodal-trigger="modal-1" data-custom-open="modal-1"
+                  tabindex="0">
                   <picture>
-                    <source media="(min-width:1500px)" srcset="./img/1920/gallery__1.jpg">
+                    <source media=" (min-width:1500px)" srcset="./img/1920/gallery__1.jpg">
                     <source media="(min-width:900px)" srcset="img_white_flower.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__bg.jpg" alt="#">
                   </picture>
-                </div>
+                </button>
 
               </div>
               <div class="swiper-slide">
-                <div class="swiper-zoom-container" tabindex="0" onclick="openModal();currentSlide(2)">
+                <button class="swiper-zoom-container" data-micromodal-trigger="modal-2" data-custom-open="modal-2"
+                  tabindex="0">
                   <picture>
                     <source media="(min-width:1500px)" srcset="./img/1920/gallery__2.jpg">
                     <source media="(min-width:900px)" srcset="img_white_flower.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__2.jpg" alt="#">
                   </picture>
-                </div>
+                </button>
               </div>
 
               <div class="swiper-slide">
-                <div class="swiper-zoom-container" tabindex="0" onclick="openModal();currentSlide(3)">
+                <button class="swiper-zoom-container" data-micromodal-trigger="modal-3" data-custom-open="modal-3"
+                  tabindex="0">
                   <picture>
                     <source media="(min-width:1500px)" srcset="./img/1920/gallery__3.jpg">
                     <source media="(min-width:900px)" srcset="img_white_flower.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__3.jpg" alt="#">
                   </picture>
-                </div>
+                </button>
               </div>
 
               <div class="swiper-slide">
-                <div class="swiper-zoom-container" tabindex="0" onclick="openModal();currentSlide(4)">
+                <button class="swiper-zoom-container" data-micromodal-trigger="modal-4" data-custom-open="modal-4"
+                  tabindex="0">
                   <picture>
                     <source media="(min-width:1500px)" srcset="./img/1920/gallery__4.jpg">
                     <source media="(min-width:900px)" srcset="img_white_flower.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__4.jpg" alt="#">
                   </picture>
-                </div>
+                </button>
               </div>
 
               <div class="swiper-slide">
-                <div class="swiper-zoom-container" tabindex="0" onclick="openModal();currentSlide(5)">
+                <button class="swiper-zoom-container" data-micromodal-trigger="modal-5" data-custom-open="modal-5"
+                  tabindex="0">
                   <picture>
                     <source media="(min-width:1500px)" srcset="./img/1920/gallery__5.jpg">
                     <source media="(min-width:900px)" srcset="img_white_flower.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__5.jpg" alt="#">
                   </picture>
-                </div>
+                </button>
               </div>
 
               <div class="swiper-slide">
-                <div class="swiper-zoom-container" tabindex="0" onclick="openModal();currentSlide(6)">
+                <button class="swiper-zoom-container" data-micromodal-trigger="modal-6" data-custom-open="modal-6"
+                  tabindex="0">
                   <picture>
                     <source media="(min-width:1500px)" srcset="./img/1920/gallery__6.jpg">
                     <source media="(min-width:900px)" srcset="img_white_flower.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__6.jpg" alt="#">
                   </picture>
-                </div>
+                </button>
               </div>
 
             </div>
           </div>
+        </div>
 
-          <div class="popup-view" id="myModal" role="dialog" aria-modal="true" tabindex="0">
-
-            <div class="card">
+        <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-custom-close>
+            <div class="modal__container card" role="dialog" tabindex="0" aria-modal="true"
+              aria-labelledby="modal-1-title">
               <div class="card__img">
                 <img src="./img/1920/popup__img-1.jpg" alt="#">
               </div>
               <div class="card__about">
-                <h3 class="card__title">Казимир Малевич</h3>
+                <h3 class="card__title" id="modal-1-title">Казимир Малевич</h3>
                 <div class="card__subtitle">«Торс»</div>
                 <div class="card__year">1929</div>
                 <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
                   Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
                   после Берлинской и Варшавской выставок в 1927 году.</p>
               </div>
-              <button class="card__close" tabindex="0">&times</button>
+              <button class="card__close" data-custom-close="modal-1" aria-label="Close modal">&times</button>
             </div>
+          </div>
+        </div>
 
-            <div class="card">
+        <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-custom-close>
+            <div class="card modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
               <div class="card__img">
                 <img src="./img/1920/popup__img-2.jpg" alt="#">
               </div>
               <div class="card__about">
-                <h3 class="card__title">Казимир Малевич</h3>
+                <h3 class="card__title" id="modal-2-title">Казимир Малевич</h3>
                 <div class="card__subtitle">«Женщина с граблями»</div>
                 <div class="card__year">1931–1932</div>
                 <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
                   Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
                   после Берлинской и Варшавской выставок в 1927 году.</p>
               </div>
-              <button class="card__close" onclick="closeModal()" tabindex="0">&times</button>
-            </div>
-
-            <div class="card">
-              <div class="card__img">
-                <img src="./img/1920/popup__img-3.jpg" alt="#">
-              </div>
-              <div class="card__about">
-                <h3 class="card__title">Казимир Малевич</h3>
-                <div class="card__subtitle">«Taking in the Harvest»</div>
-                <div class="card__year">1911</div>
-                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
-                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
-                  после Берлинской и Варшавской выставок в 1927 году.</p>
-              </div>
-              <button class="card__close" onclick="closeModal()" tabindex="0">&times</button>
-            </div>
-
-            <div class="card">
-              <div class="card__img">
-                <img src="./img/1920/popup__img-4.jpg" alt="#">
-              </div>
-              <div class="card__about">
-                <h3 class="card__title">Казимир Малевич</h3>
-                <div class="card__subtitle">«Suprematism»</div>
-                <div class="card__year">1915</div>
-                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
-                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
-                  после Берлинской и Варшавской выставок в 1927 году.</p>
-              </div>
-              <button class="card__close" onclick="closeModal()" tabindex="0">&times</button>
-            </div>
-
-            <div class="card">
-              <div class="card__img">
-                <img src="./img/1920/popup__img-5.jpg" alt="#">
-              </div>
-              <div class="card__about">
-                <h3 class="card__title">Казимир Малевич</h3>
-                <div class="card__subtitle">«Peasant woman»</div>
-                <div class="card__year">1912</div>
-                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
-                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
-                  после Берлинской и Варшавской выставок в 1927 году.</p>
-              </div>
-              <button class="card__close" onclick="closeModal()" tabindex="0">&times</button>
-            </div>
-
-            <div class="card">
-              <div class="card__img">
-                <img src="./img/1920/popup__img-6.jpg" alt="#">
-              </div>
-              <div class="card__about">
-                <h3 class="card__title">Казимир Малевич</h3>
-                <div class="card__subtitle">«Suprematism»</div>
-                <div class="card__year">1916</div>
-                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
-                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
-                  после Берлинской и Варшавской выставок в 1927 году.</p>
-              </div>
-              <button class="card__close" onclick="closeModal()" tabindex="0">&times</button>
+              <button class="card__close" data-custom-close="modal-2" aria-label="Close modal">&times</button>
             </div>
           </div>
-
         </div>
       </div>
+
+      <div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-custom-close>
+          <div class="card modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+            <div class="card__img">
+              <img src="./img/1920/popup__img-3.jpg" alt="#">
+            </div>
+            <div class="card__about">
+              <h3 class="card__title">Казимир Малевич</h3>
+              <div class="card__subtitle">«Taking in the Harvest»</div>
+              <div class="card__year">1911</div>
+              <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                после Берлинской и Варшавской выставок в 1927 году.</p>
+            </div>
+            <button class="card__close" data-custom-close="modal-3" aria-label="Close modal">&times</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="modal-4" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-custom-close>
+          <div class="card modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-4-title">
+            <div class="card__img">
+              <img src="./img/1920/popup__img-4.jpg" alt="#">
+            </div>
+            <div class="card__about">
+              <h3 class="card__title">Казимир Малевич</h3>
+              <div class="card__subtitle">«Suprematism»</div>
+              <div class="card__year">1915</div>
+              <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                после Берлинской и Варшавской выставок в 1927 году.</p>
+            </div>
+            <button class="card__close" data-custom-close="modal-4" aria-label="Close modal">&times</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="modal-5" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-custom-close>
+          <div class="card modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-5-title">
+            <div class="card__img">
+              <img src="./img/1920/popup__img-5.jpg" alt="#">
+            </div>
+            <div class="card__about">
+              <h3 class="card__title">Казимир Малевич</h3>
+              <div class="card__subtitle">«Peasant woman»</div>
+              <div class="card__year">1912</div>
+              <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                после Берлинской и Варшавской выставок в 1957 году.</p>
+            </div>
+            <button class="card__close" data-custom-close="modal-5" aria-label="Close modal">&times</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal micromodal-slide" id="modal-6" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-custom-close>
+          <div class="card modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-6-title">
+            <div class="card__img">
+              <img src="./img/1920/popup__img-6.jpg" alt="#">
+            </div>
+            <div class="card__about">
+              <h3 class="card__title">Казимир Малевич</h3>
+              <div class="card__subtitle">«Suprematism»</div>
+              <div class="card__year">1916</div>
+              <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                после Берлинской и Варшавской выставок в 1927 году.</p>
+            </div>
+            <button class="card__close" data-custom-close="modal-6" aria-label="Close modal">&times</button>
+          </div>
+        </div>
+      </div>
+
     </section>
     <section class="catalog" id="catalog">
       <div class="container">
@@ -561,80 +589,80 @@
                   <div class="catalog__content-wrap">
                     <ul class="list-reset catalog__artist">
                       <li class="catalog__artist-name">
-                        <a class="artist js-link active" tabindex="0" data-path="art1">Бенедетто
+                        <a class="artist js-link active" href="#" tabindex="0" data-path="art1">Бенедетто
                           ди Биндо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art2">Веккьетта</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art2">Веккьетта</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art0">Парентино, Бернардо</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art0">Парентино, Бернардо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art4">Бергоньоне, Амброджо</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art4">Бергоньоне, Амброджо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art5">Андреа Верроккьо</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art5">Андреа Верроккьо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art6">Пезеллино</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art6">Пезеллино</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art7">Биссоло, Франческо</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art7">Биссоло, Франческо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art8">Доменико Гирландайо</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art8">Доменико Гирландайо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art9">Пьетро Перуджино</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art9">Пьетро Перуджино</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art10">Больтраффио, Джованни</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art10">Больтраффио, Джованни</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art11">Беноццо Гоццоли</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art11">Беноццо Гоццоли</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art12">Перуцци, Бальдассаре</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art12">Перуцци, Бальдассаре</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art13">Бонсиньори, Франческо</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art13">Бонсиньори, Франческо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art14">Граначчи, Франческо</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art14">Граначчи, Франческо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art15">Пизанелло</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art15">Пизанелло</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art16">Боттичини, Рафаэлло</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art16">Боттичини, Рафаэлло</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art17">Грегорио ди Чекко</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art17">Грегорио ди Чекко</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art18">Пинтуриккьо</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art18">Пинтуриккьо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art19">Брамантино</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art19">Брамантино</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art20">Джованни да Удине</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art20">Джованни да Удине</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art21">Бреа, Людовико</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art21">Бреа, Людовико</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art22">Джованни ди Паоло</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art22">Джованни ди Паоло</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art23">Бьяджо д’Антонио Туччи</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art23">Бьяджо д’Антонио Туччи</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art24">Джорджоне</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art24">Джорджоне</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art24">Джорджоне</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art24">Джорджоне</a>
                       </li>
                     </ul>
                   </div>
@@ -651,11 +679,11 @@
                   <div class="catalog__content-wrap">
                     <ul class="list-reset catalog__artist">
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art1">Бенедетто
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art1">Бенедетто
                           ди Биндо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art2">Веккьетта</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art2">Веккьетта</a>
                       </li>
                     </ul>
                   </div>
@@ -694,11 +722,11 @@
                   <div class="catalog__content-wrap">
                     <ul class="list-reset catalog__artist">
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art1">Бенедетто
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art1">Бенедетто
                           ди Биндо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art2">Веккьетта</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art2">Веккьетта</a>
                       </li>
                     </ul>
                   </div>
@@ -738,11 +766,11 @@
                   <div class="catalog__content-wrap">
                     <ul class="list-reset catalog__artist">
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art1">Бенедетто
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art1">Бенедетто
                           ди Биндо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art2">Веккьетта</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art2">Веккьетта</a>
                       </li>
                     </ul>
                   </div>
@@ -759,11 +787,11 @@
                   <div class="catalog__content-wrap">
                     <ul class="list-reset catalog__artist">
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art1">Бенедетто
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art1">Бенедетто
                           ди Биндо</a>
                       </li>
                       <li class="catalog__artist-name">
-                        <a class="artist js-link" tabindex="0" data-path="art2">Веккьетта</a>
+                        <a class="artist js-link" href="#" tabindex="0" data-path="art2">Веккьетта</a>
                       </li>
                     </ul>
                   </div>
@@ -789,7 +817,7 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide">
-                <div class="event__card">
+                <div class="event__card" tabindex="0">
                   <img src="./img/1920/event__1.jpg" alt="" class="event__img event__img--1">
                   <div class="event__about">
                     <span class="event__subtitle">Музей им. Щусева</span>
@@ -992,30 +1020,6 @@
         </div>
       </div>
   </footer>
-
-
-  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-    <div class="modal__overlay" tabindex="-1" data-custom-close>
-      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-        <header class="modal__header">
-          <h2 class="modal__title" id="modal-1-title">
-            Micromodal
-          </h2>
-          <button class="modal__close" aria-label="Close modal" data-custom-close></button>
-        </header>
-        <main class="modal__content" id="modal-1-content">
-          <p>
-            Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also,
-            <code>esc</code> to close modal.
-          </p>
-        </main>
-        <footer class="modal__footer">
-          <button class="modal__btn modal__btn-primary">Continue</button>
-          <button class="modal__btn" data-custom-close aria-label="Close this dialog window">Close</button>
-        </footer>
-      </div>
-    </div>
-  </div>
 
 </body>
 

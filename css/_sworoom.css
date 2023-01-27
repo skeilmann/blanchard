@@ -1,12 +1,24 @@
+.showroom {
+  border: 1px solid var(--light-gray);
+}
+
 .showroom__container {
   display: flex;
   gap: 80px;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 37px;
 }
 
 .showroom__subtitle {
   margin: 0;
+  /* margin-bottom: 7px; */
   font-weight: 600;
   font-size: 24px;
+}
+
+.showroom__subtitle--2 {
+  margin-bottom: 7px;
 }
 
 address {
@@ -15,6 +27,68 @@ address {
   line-height: 32px;
   color: var(--dark-gray);
   font-style: normal;
+}
+
+.showroom__form {
+  display: flex;
+  gap: 21px;
+  flex-wrap: wrap;
+}
+
+.swowroom__input {
+  height: 50px;
+  border-radius: 100px;
+  width: 269px;
+  padding: 9px 24px;
+  border: 1px solid var(--dark-gray);
+  transition: background-color .3s;
+}
+
+.showroom input::placeholder {
+  color: var(--light-gray);
+}
+
+.swowroom__input:hover:not(:focus) {
+  background-color: var(--light-gray2);
+}
+
+.swowroom__input:focus {
+  outline: none;
+}
+
+
+.showroom__btn {
+  height: 50px;
+  border-radius: 100px;
+  padding: 12px 34px;
+  background-color: transparent;
+  /* vertical-align: middle; */
+  color: var(--acc);
+  transition-property: background-color, color;
+  transition-duration: .3s;
+  line-height: 24px;
+}
+
+.showroom__btn:hover {
+  background-color: var(--acc);
+  color: var(--white);
+}
+
+.showroom__btn:focus-visible {
+  outline-offset: 1px;
+  outline: 1px solid var(light-acc);
+}
+
+.showroom__btn:active {
+  outline: 3px solid var(--light-acc);
+  background-color: var(--dark-acc);
+  border-color: var(--dark-acc);
+  color: var(--white);
+}
+
+.showroom__item {
+  /* padding-top: 8px;
+  padding-left: 1px; */
 }
 
 .showroom__icons {
@@ -29,12 +103,37 @@ address {
   display: inline-block;
   background-repeat: no-repeat;
   background-size: contain;
+  border-radius: 100%;
+  transition: filter .3s;
+  vertical-align: middle;
 }
 
+.icon:is( :hover:not(:active),
+  :focus-visible) {
+  filter: opacity(50%);
+  outline: none;
+}
+
+.icon:active {
+  outline: 1px solid var(--dark-acc);
+}
+
+
 .icon--wa {
-  background-image: url("../img/1920/Whatsapp-Icon.jpg");
+  background-image: url("../img/1920/icon--wa.jpg");
 }
 
 .icon--tg {
-  background-image: url("../img/1920/tg-Icon.jpg");
+  background-image: url("../img/1920/icon--tg.jpg");
+}
+
+.swowroom__input.is-invalid:not(:focus) {
+  border-color: #D11616;
+  color: var(--light-gray);
+}
+
+.is-label-invalid {
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 14px;
 }

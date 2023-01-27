@@ -18,6 +18,8 @@
 }
 
 .choose-art {
+  display: inline-block;
+  padding-bottom: 10px;
   color: var(--white);
 }
 
@@ -28,7 +30,7 @@
 .gallery__choose-item {
   position: relative;
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 24px;
   color: var(--white);
   cursor: pointer;
   -webkit-user-select: none;
@@ -108,6 +110,7 @@
 .gallery__right .swiper-slide .img {
   width: 100%;
   height: 100%;
+
   object-fit: contain;
 }
 
@@ -120,8 +123,9 @@
   z-index: 10;
   display: flex;
   justify-content: space-between;
-  width: 130px;
+  width: 133px;
   margin-bottom: 30px;
+  padding-left: 3px;
 }
 
 .swiper-nav-btn {
@@ -193,14 +197,14 @@
   content: "";
   position: absolute;
   z-index: 11;
-  top: 50%;
+  top: 46%;
   left: 50%;
   width: 90%;
   height: 90%;
+  opacity: 0;
   background-image: url("../img/magnify.svg");
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0;
   transition: opacity .4s ease-in-out;
   transform: translate3d(-50%, -50%, 0);
   pointer-events: none;
@@ -210,11 +214,11 @@
   content: "";
   position: absolute;
   z-index: 10;
-  opacity: 0;
-  top: 50%;
+  top: 49%;
   left: 50%;
-  width: 90%;
-  height: 90%;
+  width: 85%;
+  height: 86%;
+  opacity: 0;
   background-color: rgba(0, 0, 0, .5);
   transition: opacity .4s ease-in-out;
   transform: translate3d(-50%, -50%, 0);
@@ -229,16 +233,15 @@
 .swiper-2 .swiper-zoom-container:after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   transition: background-color .3s;
 }
 
 .swiper-2 .swiper-zoom-container:active::after {
-  background-color: rgba(194, 131, 243, 0.4);
-
+  background-color: rgba(194, 131, 243, .4);
 }
 
 .swiper-2 .swiper-slide-zoomed.swiper-slide:hover::before,
@@ -248,16 +251,15 @@
 
 .popup-view {
   position: fixed;
-  display: none;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.5);
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  justify-content: center;
+  display: none;
   align-items: center;
-
+  justify-content: center;
+  background: rgba(0, 0, 0, .5);
 }
 
 .card {
@@ -266,7 +268,7 @@
   width: 900px;
   height: 500px;
   background: var(--white);
-  box-shadow: 10px 10px 80px #000;
+  box-shadow: 10px 10px 80px #000000;
 }
 
 .card__img {
@@ -277,6 +279,7 @@
 .card__img img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
@@ -286,37 +289,36 @@
 
 .card__title {
   margin: 0;
-  font-weight: 600;
   font-size: 24px;
+  font-weight: 600;
   line-height: 33px;
 }
 
 .card__subtitle {
   display: block;
-  font-weight: 600;
   font-size: 16px;
+  font-weight: 600;
   line-height: 22px;
 }
 
 .card__year {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
   margin-bottom: 39px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
   color: #999999;
-
 }
 
 .card__close {
-  cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
+  border: none;
   font-size: 40px;
   font-weight: lighter;
-  opacity: 0.7;
-  border: none;
+  opacity: .7;
   background: none;
+  cursor: pointer;
   transition: color .3s;
 }
 
@@ -338,12 +340,12 @@ picture {
 .swiper-zoom-container::before {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   border: 3px solid var(--acc);
-  left: 0;
-  top: 0;
-  box-sizing: border-box;
   opacity: 0;
 }
 

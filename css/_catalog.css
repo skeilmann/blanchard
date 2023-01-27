@@ -1,6 +1,6 @@
 .catalog__desc {
   max-width: 1080px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   color: var(--dark-gray);
 }
 
@@ -26,13 +26,12 @@
 
 .catalog__card-img {
   width: 100%;
-  margin-bottom: 30px;
-
+  margin-bottom: 22px;
   object-fit: cover;
 }
 
 .catalog__card-name {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-size: 24px;
   font-weight: 600;
   line-height: 33px;
@@ -70,18 +69,23 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
-  color: #333333;
+  color: var(--dark-gray);
+}
+
+.catalog__content-wrap {
+  width: 94%;
 }
 
 .catalog__artist {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin: 25px 0 25px;
+  margin: 25px 0;
+  column-gap: 25px;
 }
 
 .catalog__artist-name {
-  width: 33.3333%;
+  width: 30%;
 }
 
 .btn--catalog:focus-visible:not(:active) .btn__text {
@@ -94,7 +98,7 @@
 }
 
 .btn--catalog:hover:before {
-  background-color: var(--acc);
+  background-color: var(--light-acc);
 }
 
 .btn--catalog:active .btn__text {
@@ -125,10 +129,84 @@
   background-color: var(--dark-acc);
   transition: transform .5s;
   transform: scaleX(0);
-  transform-origin: center;
+  transform-origin: left;
 }
 
 .artist:hover:before {
   transform: scaleX(1);
-  transform-origin: center;
+  transform-origin: left;
+}
+
+.catalog__unknown-container {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+
+  gap: 24px;
+}
+
+.catalog__unknown-wrap {
+  width: 35%;
+}
+
+.catalog__unknown-title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.catalog__unknown-image {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  width: 275px;
+  height: 186px;
+  margin: 2px;
+  border: 10px solid #ffffff;
+  outline: 2px solid var(--light-gray);
+  background-color: var(--light-gray);
+}
+
+.catalog__unknown-desc {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.catalog__unknown-link {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--acc);
+}
+
+.catalog__card-img--null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 20%;
+  background-color: var(--light-gray2);
+}
+
+.catalog__card-img--null>img {
+  max-width: 236px;
+  margin: 0;
+}
+
+.catalog__card-img--null>h4 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+  color: #666666;
+}
+
+.catalog__card-link {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--acc);
 }

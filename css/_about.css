@@ -1,3 +1,7 @@
 .about__container {
-  padding-right: 520px;
+  padding-bottom: 70px;
+}
+
+.about p {
+  width: 67%;
 }

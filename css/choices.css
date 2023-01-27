@@ -100,9 +100,9 @@
   border-color: transparent var(--white) var(--white) transparent;
   border-width: 1px;
   position: absolute;
-  right: 11.5px;
+  right: 17.5px;
   top: 50%;
-  margin-top: -5px;
+  margin-top: -3px;
   pointer-events: none;
   transform: rotate(45deg);
   transition-property: border-color, transform;
@@ -112,7 +112,7 @@
 }
 
 .choices.is-open .choices__inner::after {
-  transform: rotate(585deg);
+  transform: rotate(225deg);
 }
 
 .choices__inner:hover::after {
@@ -221,4 +221,8 @@
   line-height: 25px;
   text-align: center;
   /* color: var(--white); */
+}
+
+.header__nav2-item .choices__inner::after {
+  right: 15px;
 }

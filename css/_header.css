@@ -28,7 +28,7 @@
 .header__nav {
   display: flex;
   margin: auto 0;
-  gap: 62px;
+  gap: 62.5px;
 }
 
 .header__link {
@@ -103,7 +103,7 @@
 .header__row-2 {
   position: relative;
   z-index: 1000;
-  padding-top: 19px;
+  padding-top: 18px;
   padding-bottom: 17px;
   background: rgba(0, 0, 0, 0.5);
 }

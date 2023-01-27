@@ -22,15 +22,24 @@
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
-  transition: color .25s ease;
-  border-top: 1px solid #CACACA;
+  transition: color .3s;
+  border-top: 1px solid transparent;
   border-bottom: 1px solid #CACACA;
+}
+
+.ac:first-of-type .ac-trigger {
+  border-top: 1px solid var(--light-gray);
+}
+
+.ac:first-of-type .ac-trigger:hover {
+  border-top: 1px solid var(--acc);
 }
 
 .ac-trigger:hover {
   border-top: 1px solid var(--acc);
   border-bottom: 1px solid var(--acc);
-  transition: border 0.3s ease-in-out;
+  transition: border, color 0.3s;
+  color: var(--light-acc);
 }
 
 .ac .ac-trigger::before {
@@ -62,8 +71,6 @@
   transform: translateY(-60%) rotate(-45deg);
   transition: transform .3s;
 }
-
-.ac:hover .ac-trigger::after {}
 
 .ac .ac-panel {
   overflow: hidden;

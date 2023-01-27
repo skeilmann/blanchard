@@ -4,9 +4,9 @@ const swiper1 = new Swiper('.swiper-1', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
   effect: 'fade',
   fadeEffect: {
     crossFade: true
@@ -75,7 +75,7 @@ const swiper3 = new Swiper('.swiper-3', {
 const swiper4 = new Swiper('.swiper-4', {
   // Optional parameters
   direction: 'horizontal',
-  spaceBetween: 50,
+  spaceBetween: 47,
   slidesPerView: 3,
   slidesPerGroup: 1,
   watchSlidesVisibility: false,

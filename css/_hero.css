@@ -1,18 +1,18 @@
 .hero {
   position: relative;
-  /* padding-top: 62px;
-  padding-bottom: 122px; */
   margin-top: -170px;
   padding-top: 170px;
-  background-color: aqua;
-  /* overflow: hidden; */
+  background-color: var(--light-gray);
+}
+
+.hero__container {
+  padding-top: 63px;
+  padding-bottom: 123px;
 }
 
 .hero__article {
   position: relative;
   z-index: 2;
-  padding-top: 62px;
-  padding-bottom: 122px;
   max-width: 600px;
 }
 

@@ -1,4 +1,4 @@
-const firstParams = {
+const firstParams2 = {
   tabsClass: "js-link",
   wrap: "js-catalog-wrap",
   content: "js-catalog-content",
@@ -33,4 +33,4 @@ function setTabs(params) {
   });
 }
 
-setTabs(firstParams);
+setTabs(firstParams2);

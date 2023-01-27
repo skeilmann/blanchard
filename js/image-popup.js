@@ -2,6 +2,7 @@
 function openModal() {
   document.getElementById("myModal").style.display = "flex";
   document.body.style.overflow = 'hidden'; // added line to block body from scrolling
+  document.body.tabIndex = '-1'; // added line to block body from scrolling
 }
 
 // Close the Modal

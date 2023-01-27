@@ -25,7 +25,7 @@ function init() {
     {
       iconLayout: "default#image",
       iconImageHref: "../img/1920/location-sign.svg",
-      iconImageSize: [25, 25],
+      iconImageSize: [22, 22],
       iconImageOffset: [-3, -42],
     }
   );

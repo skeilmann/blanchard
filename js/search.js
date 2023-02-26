@@ -19,7 +19,6 @@
     });
 
     openBtn.addEventListener("click", function (evt) {
-      this.disabled = true;
 
       if (
         !search.classList.contains(params.activeClass) &&
@@ -30,22 +29,20 @@
     });
 
     closeBtn.addEventListener("click", function () {
-      openBtn.disabled = false;
       search.classList.add(params.hiddenClass);
     });
 
     document.body.addEventListener("click", function (evt) {
       if (!evt._isSearch && search._isOpened) {
-        openBtn.disabled = false;
         search.classList.add(params.hiddenClass);
       }
     });
   }
 
   setSearch({
+    searchClass: "js-form", // класс формы поиска
     openBtnClass: "js-open-search", // класс кнопки открытия
     closeBtnClass: "js-close", // класс кнопки закрытия
-    searchClass: "js-form", // класс формы поиска
     activeClass: "is-opened", // класс открытого состояния
     hiddenClass: "is-closed", // класс закрывающегося состояния (удаляется сразу после закрытия)
   });

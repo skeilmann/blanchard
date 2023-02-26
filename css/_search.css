@@ -2,8 +2,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 24px;
+  /* height: 24px; */
   margin-left: auto;
+  overflow: hidden;
 }
 
 .nav__search-form {
@@ -83,30 +84,114 @@
 }
 
 .nav__delete-btn {
-  position: absolute;
-  right: 0;
+  /* position: absolute;
+  right: 0; */
   display: none;
   width: 30px;
   height: 30px;
   padding: 0;
   border: none;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 200;
   color: var(--white);
-  transform: rotate(45deg);
+  background-color: transparent;
+  cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-  .nav__search-form.is-opened {
-    display: flex;
-    transform-origin: right;
-    animation-name: search-open;
-    animation-duration: .3s;
+.js-open-search {
+  display: none;
+  order: 3;
+}
+
+@media (max-width: 1200px) {
+  .js-open-search {
+    display: inline-block;
   }
 
-  .nav__search-form.is-closed {
-    transform-origin: right;
-    animation-name: search-close;
-    animation-duration: .3s;
+  .header__row-2 {
+    transform: translateX(120%);
+    background-color: black;
+    z-index: 100;
+    height: 100px;
+  }
+
+  .nav__search-btn {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .nav__search-input {
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  .header__row-2.is-opened {
+    transform: translateX(0);
+    transition: transform .3s;
+  }
+
+  .is-opened .nav__search-input {
+    opacity: 1;
+    width: 218px;
+  }
+
+  .is-opened .nav__search-input::placeholder {
+    color: transparent;
+  }
+
+  .is-opened .nav__delete-btn {
+    display: flex;
+  }
+
+  .is-closed .nav__delete-btn {
+    display: none;
+  }
+
+  .nav__delete-btn:active {
+    outline: none;
+    background-color: transparent;
+
+  }
+
+  .header__row-2.is-closed {
+    transform: translateX(120%);
+  }
+
+  .is-closed .nav__search-input {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__row-2 {
+    width: 100%;
+  }
+
+  .nav__search-form {
+    width: 100%;
+    /* width: 300px; */
+    justify-content: space-between;
+  }
+
+  .nav__search-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__row-2 {
+    height: 64px;
+  }
+
+  .nav__search-btn {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nav__delete-btn {
+    font-size: 30px;
+    width: 16px;
+    height: 16px;
   }
 }

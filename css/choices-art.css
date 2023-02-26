@@ -1,5 +1,6 @@
 .gallery__select-wrap {
   width: 400px;
+  margin-bottom: 30px;
 }
 
 .gallery__select-wrap .choices__inner {
@@ -100,4 +101,32 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
+}
+
+@media (max-width: 1500px) {
+  .gallery__select-wrap {
+    width: 281px;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery__select-wrap {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .gallery__select-wrap {
+    width: 100%;
+    margin-bottom: 31px;
+  }
+
+  .gallery__choose-wrap li {
+    margin-bottom: 4px;
+  }
+
+  .gallery__choose-item {
+    font-size: 16px;
+  }
 }

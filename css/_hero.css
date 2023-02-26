@@ -13,24 +13,29 @@
 .hero__article {
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
   max-width: 600px;
+  min-height: 444px;
 }
 
 .hero__title {
+  margin-bottom: -5px;
   font-size: 72px;
   font-weight: 700;
   line-height: 99px;
   color: #ffffff;
-  margin-bottom: -5px;
 }
 
 .hero__desc {
   display: inline-block;
+  margin-bottom: auto;
+  padding-bottom: 20px;
   font-size: 18px;
   font-weight: 700;
   line-height: 167%;
   color: #ffffff;
-  margin-bottom: 92px;
 }
 
 .hero__btn {
@@ -46,8 +51,8 @@
   top: 0;
   right: 0;
   left: 0;
-  cursor: pointer;
   height: 100%;
+  cursor: pointer;
 }
 
 .swiper-1 {
@@ -55,8 +60,8 @@
 }
 
 .swiper-1 .swiper-slide {
-  min-height: 800px;
   height: 100%;
+  min-height: 800px;
 }
 
 .swiper-1 .swiper-wrapper {
@@ -66,5 +71,64 @@
 .swiper-1 .swiper-slide img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .hero__container {
+    padding-top: 103px;
+    padding-bottom: 114px;
+  }
+
+  .hero__article {
+    max-width: 80%;
+    min-height: 451px;
+  }
+
+  .hero__title {
+    margin-bottom: -11px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero__article {
+    max-width: unset;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero__container {
+    padding: 30px 15px 45px;
+  }
+
+  .hero__article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: unset;
+  }
+
+  .hero__title {
+    margin-bottom: 2px;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+  }
+
+  .hero__desc {
+    max-width: 90%;
+    margin-bottom: 21px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .hero__btn {
+    padding: 10px 16px;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }

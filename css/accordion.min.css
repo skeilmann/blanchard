@@ -23,12 +23,12 @@
   background-color: transparent;
   cursor: pointer;
   transition: color .3s;
-  border-top: 1px solid transparent;
+  border-top: 1px solid #cacaca;
   border-bottom: 1px solid #CACACA;
 }
 
 .ac:first-of-type .ac-trigger {
-  border-top: 1px solid var(--light-gray);
+  border-top: 1px solid var(--light-gray3);
 }
 
 .ac:first-of-type .ac-trigger:hover {
@@ -107,4 +107,17 @@
 
 .ac.is-active .btn--catalog {
   border-color: var(--acc);
+}
+
+@media (max-width: 500px) {
+  .ac .ac-trigger::before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .ac .ac-trigger::after {
+    width: 7px;
+    height: 7px;
+    right: 11px;
+  }
 }

@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard - художественная галерея</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <!-- <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"> -->
   <link type="image/svg+xml" href="./img/favicon.svg" rel="icon">
 
+  <link rel="stylesheet" href="./css/_fonts.css">
   <link href="./css/choices.css" rel="stylesheet">
   <link href="./css/swiper-bundle.css" rel="stylesheet">
   <script src="./js/choices.js" defer></script>
@@ -34,16 +35,30 @@
   <script src="./js/init-validation.js" defer></script>
   <script src="./js/micromodal.js" defer></script>
   <script src="./js/micromodal-init.js" defer></script>
+  <script src="./js/hamburger.js" defer></script>
 
   <link href="./css/style.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="page">
   <header class="header">
-    <div class="header__row-1">
+    <nav class="header__row-1">
       <div class="container header__container">
-        <a class="logo" href="#"><img class="logo__img" src="./img/Лого.svg" alt="Logo"></a>
+        <a class="logo" href="#">
+          <picture>
+            <source media="(min-width:1500px)" srcset="./img/logo.svg">
+            <source media="(min-width:500px)" srcset="./img/logo2.svg">
+            <source media="(max-width:499px)" srcset="./img/logo3.svg">
+            <img class="logo__img" src="./img/logo.svg" alt="Logo">
+          </picture>
+        </a>
+        <button class="hamburger hamburger--spin" type="button" aria-label="Menu" aria-controls="navigation"
+          aria-expanded="true/false">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
         <div class="header__menu">
           <ul class="list-reset header__nav">
             <li class="header__nav-item">
@@ -65,11 +80,12 @@
               <a class="header__link" href="#contacts">Контакты</a>
             </li>
           </ul>
+          <button class="header__btn" href="#">Войти</button>
         </div>
-        <a class="header__btn" href="#">Войти</a>
+        <button class="nav__search-btn js-open-search" aria-label="Открыть поиск"></button>
       </div>
-    </div>
-    <div class="header__row-2">
+    </nav>
+    <div class="header__row-2 js-form">
       <div class="container header__container">
         <div class="header__select-wrap">
           <ul class="list-reset header__nav2">
@@ -145,17 +161,17 @@
           </ul>
         </div>
         <div class="nav__search-container">
-          <form id="search-form" class="nav__search-form js-form" role="searchbox" action="/" method="GET">
-            <button class="nav__search-btn js-open-search" type="button" role="searchbox" aria-label="Открыть поиск">
+          <form id="search-form" class="nav__search-form" role="searchbox" action="/" method="GET">
+            <button class="nav__search-btn" type="button" role="searchbox">
             </button>
             <input class="nav__search-input" name="searching" type="text" aria-label="Искать на всём сайте"
               placeholder="Поиск по саиту">
-            <button class="btn nav__delete-btn js-close" type="button" aria-label="очистить поиск">+</button>
+            <button class="btn nav__delete-btn js-close" type="button" aria-label="очистить поиск">&times</button>
           </form>
         </div>
-
       </div>
     </div>
+
     <section class="hero">
       <div class="container hero__container">
         <div class="hero__article">
@@ -169,22 +185,28 @@
             <!-- Slides -->
             <div class="swiper-slide">
               <picture>
-                <source media="(min-width:1500px)" srcset="./img/1920/header_bg.jpg">
-                <source media="(min-width:900px)" srcset="img_white_flower.jpg">
-                <img class="swiper__img" src="./img/1920/header_bg.jpg" alt="#">
+                <source media="(min-width:1500px)" srcset="./img/1920/header_bg-1.jpg">
+                <source media="(min-width:900px)" srcset="./img/1024/header_bg_1024-1.jpg">
+                <source media="(min-width:540px)" srcset="./img/768/header_bg_768-1.jpg">
+                <source media="(max-width:540px)" srcset="./img/320/header_bg_320-1.jpg">
+                <img class="swiper__img" src="./img/1920/header_bg-1.jpg" alt="#">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
                 <source media="(min-width:1500px)" srcset="./img/1920/header_bg-2.jpg">
-                <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                <source media="(min-width:900px)" srcset="./img/1024/header_bg_1024-2.jpg">
+                <source media="(min-width:540px)" srcset="./img/768/header_bg_768-2.jpg">
+                <source media="(max-width:540px)" srcset="./img/320/header_bg_320-2.jpg">
                 <img class="swiper__img" src="./img/1920/header_bg-2.jpg" alt="#">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
                 <source media="(min-width:1500px)" srcset="./img/1920/header_bg-3.jpg">
-                <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                <source media="(min-width:900px)" srcset="./img/1024/header_bg_1024-3.jpg">
+                <source media="(min-width:540px)" srcset="./img/768/header_bg_768-3.jpg">
+                <source media="(max-width:540px)" srcset="./img/320/header_bg_320-3.jpg">
                 <img class="swiper__img" src="./img/1920/header_bg-3.jpg" alt="#">
               </picture>
             </div>
@@ -260,62 +282,69 @@
                   tabindex="0">
                   <picture>
                     <source media=" (min-width:1500px)" srcset="./img/1920/gallery__1.jpg">
-                    <source media="(min-width:900px)" srcset="img_white_flower.jpg">
-                    <img class="swiper__img" src="./img/1920/gallery__bg.jpg" alt="#">
+                    <source media="(min-width:900px)" srcset="./img/1024/gallery__1__1024.jpg">
+                    <source media="(min-width:541px)" srcset="./img/768/gallery__1-768.jpg">
+                    <source media="(max-width:540px)" srcset="./img/320/gallery__1-320.jpg">
+                    <img class="swiper__img" src="./img/1920/gallery__1.jpg" alt="#">
                   </picture>
                 </button>
-
               </div>
               <div class="swiper-slide">
                 <button class="swiper-zoom-container" data-micromodal-trigger="modal-2" data-custom-open="modal-2"
                   tabindex="0">
                   <picture>
                     <source media="(min-width:1500px)" srcset="./img/1920/gallery__2.jpg">
-                    <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                    <source media="(min-width:900px)" srcset="./img/1024/gallery__2__1024.jpg">
+                    <source media="(min-width:541px)" srcset="./img/768/gallery__2-768.jpg">
+                    <source media="(max-width:540px)" srcset="./img/320/gallery__2-320.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__2.jpg" alt="#">
                   </picture>
                 </button>
               </div>
-
               <div class="swiper-slide">
                 <button class="swiper-zoom-container" data-micromodal-trigger="modal-3" data-custom-open="modal-3"
                   tabindex="0">
                   <picture>
                     <source media="(min-width:1500px)" srcset="./img/1920/gallery__3.jpg">
-                    <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                    <source media="(min-width:900px)" srcset="./img/1024/gallery__3__1024.jpg">
+                    <source media="(min-width:541px)" srcset="./img/768/gallery__3-768.jpg">
+                    <source media="(max-width:540px)" srcset="./img/320/gallery__3-320.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__3.jpg" alt="#">
                   </picture>
                 </button>
               </div>
-
               <div class="swiper-slide">
                 <button class="swiper-zoom-container" data-micromodal-trigger="modal-4" data-custom-open="modal-4"
                   tabindex="0">
                   <picture>
                     <source media="(min-width:1500px)" srcset="./img/1920/gallery__4.jpg">
-                    <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                    <source media="(min-width:900px)" srcset="./img/1024/gallery__4__1024.jpg">
+                    <source media="(min-width:541px)" srcset="./img/768/gallery__4-768.jpg">
+                    <source media="(max-width:540px)" srcset="./img/320/gallery__4-320.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__4.jpg" alt="#">
                   </picture>
                 </button>
               </div>
-
               <div class="swiper-slide">
                 <button class="swiper-zoom-container" data-micromodal-trigger="modal-5" data-custom-open="modal-5"
                   tabindex="0">
                   <picture>
                     <source media="(min-width:1500px)" srcset="./img/1920/gallery__5.jpg">
-                    <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                    <source media="(min-width:900px)" srcset="./img/1024/gallery__5__1024.jpg">
+                    <source media="(min-width:541px)" srcset="./img/768/gallery__5-768.jpg">
+                    <source media="(max-width:540px)" srcset="./img/320/gallery__5-320.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__5.jpg" alt="#">
                   </picture>
                 </button>
               </div>
-
               <div class="swiper-slide">
                 <button class="swiper-zoom-container" data-micromodal-trigger="modal-6" data-custom-open="modal-6"
                   tabindex="0">
                   <picture>
                     <source media="(min-width:1500px)" srcset="./img/1920/gallery__6.jpg">
-                    <source media="(min-width:900px)" srcset="img_white_flower.jpg">
+                    <source media="(min-width:900px)" srcset="./img/1024/gallery__6__1024.jpg">
+                    <source media="(min-width:541px)" srcset="./img/768/gallery__6-768.jpg">
+                    <source media="(max-width:540px)" srcset="./img/320/gallery__1-320.jpg">
                     <img class="swiper__img" src="./img/1920/gallery__6.jpg" alt="#">
                   </picture>
                 </button>
@@ -324,43 +353,43 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-          <div class="modal__overlay" tabindex="-1" data-custom-close>
-            <div class="modal__container card" role="dialog" tabindex="0" aria-modal="true"
-              aria-labelledby="modal-1-title">
-              <div class="card__img">
-                <img src="./img/1920/popup__img-1.jpg" alt="#">
-              </div>
-              <div class="card__about">
-                <h3 class="card__title" id="modal-1-title">Казимир Малевич</h3>
-                <div class="card__subtitle">«Торс»</div>
-                <div class="card__year">1929</div>
-                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
-                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
-                  после Берлинской и Варшавской выставок в 1927 году.</p>
-              </div>
-              <button class="card__close" data-custom-close="modal-1" aria-label="Close modal">&times</button>
+      <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-custom-close>
+          <div class="modal__container card" role="dialog" tabindex="0" aria-modal="true"
+            aria-labelledby="modal-1-title">
+            <div class="card__img">
+              <img src="./img/1920/popup__img-1.jpg" alt="#">
             </div>
+            <div class="card__about">
+              <h3 class="card__title" id="modal-1-title">Казимир Малевич</h3>
+              <div class="card__subtitle">«Торс»</div>
+              <div class="card__year">1929</div>
+              <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                после Берлинской и Варшавской выставок в 1927 году.</p>
+            </div>
+            <button class="card__close" data-custom-close="modal-1" aria-label="Close modal">&times</button>
           </div>
         </div>
+      </div>
 
-        <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
-          <div class="modal__overlay" tabindex="-1" data-custom-close>
-            <div class="card modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
-              <div class="card__img">
-                <img src="./img/1920/popup__img-2.jpg" alt="#">
-              </div>
-              <div class="card__about">
-                <h3 class="card__title" id="modal-2-title">Казимир Малевич</h3>
-                <div class="card__subtitle">«Женщина с граблями»</div>
-                <div class="card__year">1931–1932</div>
-                <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
-                  Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
-                  после Берлинской и Варшавской выставок в 1927 году.</p>
-              </div>
-              <button class="card__close" data-custom-close="modal-2" aria-label="Close modal">&times</button>
+      <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-custom-close>
+          <div class="card modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+            <div class="card__img">
+              <img src="./img/1920/popup__img-2.jpg" alt="#">
             </div>
+            <div class="card__about">
+              <h3 class="card__title" id="modal-2-title">Казимир Малевич</h3>
+              <div class="card__subtitle">«Женщина с граблями»</div>
+              <div class="card__year">1931–1932</div>
+              <p class="card__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича.
+                Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян
+                после Берлинской и Варшавской выставок в 1927 году.</p>
+            </div>
+            <button class="card__close" data-custom-close="modal-2" aria-label="Close modal">&times</button>
           </div>
         </div>
       </div>
@@ -441,7 +470,11 @@
         </div>
       </div>
 
+
+
     </section>
+
+
     <section class="catalog" id="catalog">
       <div class="container">
         <h2 class="title">Каталог</h2>
@@ -468,14 +501,17 @@
               <img src="./img/1920/catalog__artist-1.jpg" alt="#" class="catalog__card-img">
               <div class="catalog__card-name">Доменико Гирландайо</div>
               <div class="catalog__subtitle">2 июня 1448–11 января 1494</div>
-              <p class="catalog__card-desc">Один из ведущих флорентийских художников Кватроченто, основатель
+              <p class="catalog__card-desc">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
                 художественной
-                династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный
-                Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых
+                династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где
+                юный
+                Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов,
+                в&nbsp;которых
                 выпукло,
-                со всевозможными подробностямиs показана домашняя жизнь библейских персонажей (в их роли выступают
+                со&nbsp;всевозможными подробностямиs показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли
+                выступают
                 знатные
-                граждане Флоренции в костюмах того времени).</p>
+                граждане Флоренции в&nbsp;костюмах того времени).</p>
             </div>
 
             <div class="article catalog__card js-catalog-content" data-target="art2">
@@ -577,7 +613,7 @@
             </div>
 
           </div>
-          <div class="catalog_right">
+          <div class="catalog__right">
             <ul class="list-reset js-accordion-container">
               <li class="catalog__item ac">
                 <h3 class="catalog__subtitle ac-header">
@@ -822,11 +858,12 @@
                   <div class="event__about">
                     <span class="event__subtitle">Музей им. Щусева</span>
                     <span class="event__subtitle">с 20 марта по 30 апреля</span>
-                    <h3 class="event__title card__title">Книжная гравюра в живом восприятии</h3>
-                    <p class="event__desc">Один из ведущих флорентийских художников Кватроченто, основатель
-                      художественной династии, которую продолжили его брат Давид и сын Ридольфо</p>
+                    <h3 class="event__title card__title">Книжная гравюра в&nbsp;живом восприятии</h3>
+                    <h3 class="event__title card__title--2">Книжная гравюра в восприятии</h3>
+                    <p class="event__desc">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+                      художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо</p>
+                    <a href="#" class="event__more link">Подробнее</a>
                   </div>
-                  <a href="#" class="event__more link">Подробнее</a>
                 </div>
               </div>
 
@@ -839,8 +876,8 @@
                     <h3 class="event__title card__title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
                     <p class="event__desc">Высокий уровень вовлечения представителей целевой аудитории является чётким
                       доказательством простого факта</p>
+                    <a href="#" class="event__more link">Подробнее</a>
                   </div>
-                  <a href="#" class="event__more link">Подробнее</a>
                 </div>
               </div>
 
@@ -854,8 +891,8 @@
                     <p class="event__desc">Идейные соображения высшего порядка, а также современная методология
                       разработки
                       играет важную роль в формировании глубокомысленных рассуждений</p>
+                    <a href="#" class="event__more link">Подробнее</a>
                   </div>
-                  <a href="#" class="event__more link">Подробнее</a>
                 </div>
               </div>
 
@@ -869,8 +906,8 @@
                     <p class="event__desc">Один из ведущих флорентийских художников Кватроченто, основатель
                       художественной
                       династии, которую продолжили его брат Давид и сын Ридольфо</p>
+                    <a href="#" class="event__more link">Подробнее</a>
                   </div>
-                  <a href="#" class="event__more link">Подробнее</a>
                 </div>
               </div>
 
@@ -883,8 +920,8 @@
                     <h3 class="event__title card__title">XXIV Международная биеннале молодого искусства</h3>
                     <p class="event__desc">Внезапно, реплицированные с зарубежных источников, современные исследования
                     </p>
+                    <a href="#" class="event__more link">Подробнее</a>
                   </div>
-                  <a href="#" class="event__more link">Подробнее</a>
                 </div>
               </div>
 
@@ -897,13 +934,14 @@
                     <h3 class="event__title card__title">Книжная гравюра в живом восприятии</h3>
                     <p class="event__desc">Один из ведущих флорентийских художников Кватроченто, основатель
                       художественной династии, которую продолжили его брат Давид и сын Ридольфо</p>
+                    <a href="#" class="event__more link">Подробнее</a>
                   </div>
-                  <a href="#" class="event__more link">Подробнее</a>
                 </div>
               </div>
 
             </div>
           </div>
+          <div class="swiper-3-pagination"></div>
 
         </div>
       </div>
@@ -911,22 +949,42 @@
     <section class="project" id="projects">
       <div class="container project__container">
         <h2 class="title">Проекты</h2>
+
         <p class="project__desc">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей
-          деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые
-          государства смешаны с не уникальными данными до степени совершённой неузнаваемости, из-за чего возрастает
-          их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <button class="btn--tippy"
-            id="myTippy1">i</button> обеспечение нашей
+          деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые
+          государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости, из-за чего
+          возрастает
+          их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <button
+            class="btn--tippy" id="myTippy1">i</button>&nbsp;обеспечение нашей
           деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений.
-          И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button class="btn--tippy"
+          И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button class="btn--tippy"
             id="myTippy2">i</button>
-          исключительно в разрезе
-          маркетинговых и финансовых <button class="btn--tippy" id="myTippy3">i</button> предпосылок. Банальные,
-          но неопровержимые выводы,
-          а также
-          представители современных
-          социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны
-          с не уникальными данными до степени совершённой неузнаваемости. Подробнее: <a href=""
+          исключительно в&nbsp;разрезе
+          маркетинговых и&nbsp;финансовых <button class="btn--tippy" id="myTippy3">i</button>&nbsp;предпосылок.
+          Банальные,
+          но&nbsp;неопровержимые выводы,
+          а&nbsp;также представители современных
+          социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны
+          с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости. Подробнее: <a href=""
             class="project__more link">blanchard-art.ru/projects</a></p>
+
+        <p class="project__desc project__desc--2">Предварительные выводы: постоянное информационно&nbsp;&mdash;
+          пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения
+          сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
+          совершённой неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное
+          информационно&nbsp;&mdash; пропагандистское
+          <button class="btn--tippy" id="myTippy1">i</button>
+          обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых
+          решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены
+          <button class="btn--tippy" id="myTippy2">i</button>
+          исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых
+          <button class="btn--tippy" id="myTippy3">i</button>
+          предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современых социальных
+          резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны
+          с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости. Подробнее: <a href=""
+            class="project__more link">blanchard-art.ru/projects/about</a>
+        </p>
+
         <div class="project__partner">
           <h3 class="project__subtitle">Партнёры проектов:</h3>
           <div class="project__swiper">
@@ -940,31 +998,76 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide" tabindex="0">
-                  <img src="./img/1920/project__company-1.jpg" alt="#" class="swiper-4__img">
+                  <picture>
+                    <source media="(min-width:900px)" srcset="./img/1920/project__company-1.jpg">
+                    <source media="(min-width:540px)" srcset="./img/768/project__company-1-768.jpg">
+                    <source media="(max-width:540px)" srcset="">
+                    <img src="./img/1920/project__company-1.jpg" alt="#" class="swiper-4__img">
+                  </picture>
                 </div>
                 <div class="swiper-slide" tabindex="0">
-                  <img src="./img/1920/project__company-2.jpg" alt="#" class="swiper-4__img">
+                  <picture>
+                    <source media="(min-width:900px)" srcset="./img/1920/project__company-2.jpg">
+                    <source media="(min-width:540px)" srcset="./img/768/project__company-2-768.jpg">
+                    <source media="(max-width:540px)" srcset="">
+                    <img src="./img/1920/project__company-2.jpg" alt="#" class="swiper-4__img">
+                  </picture>
                 </div>
                 <div class="swiper-slide" tabindex="0">
-                  <img src="./img/1920/project__company-3.jpg" alt="#" class="swiper-4__img">
+                  <picture>
+                    <source media="(min-width:900px)" srcset="./img/1920/project__company-3.jpg">
+                    <source media="(min-width:540px)" srcset="./img/768/project__company-3-768.jpg">
+                    <source media="(max-width:540px)" srcset="">
+                    <img src="./img/1920/project__company-3.jpg" alt="#" class="swiper-4__img">
+                  </picture>
                 </div>
                 <div class="swiper-slide" tabindex="0">
-                  <img src="./img/1920/project__company-4.jpg" alt="#" class="swiper-4__img">
+                  <picture>
+                    <source media="(min-width:900px)" srcset="./img/1920/project__company-4.jpg">
+                    <source media="(min-width:540px)" srcset="./img/768/project__company-4-768.jpg">
+                    <source media="(max-width:540px)" srcset="">
+                    <img src="./img/1920/project__company-4.jpg" alt="#" class="swiper-4__img">
+                  </picture>
                 </div>
                 <div class="swiper-slide" tabindex="0">
-                  <img src="./img/1920/project__company-5.jpg" alt="#" class="swiper-4__img">
+                  <picture>
+                    <source media="(min-width:900px)" srcset="./img/1920/project__company-5.jpg">
+                    <source media="(min-width:540px)" srcset="./img/768/project__company-5-768.jpg">
+                    <source media="(max-width:540px)" srcset="">
+                    <img src="./img/1920/project__company-5.jpg" alt="#" class="swiper-4__img">
+                  </picture>
                 </div>
                 <div class="swiper-slide" tabindex="0">
-                  <img src="./img/1920/project__company-6.jpg" alt="#" class="swiper-4__img">
+                  <picture>
+                    <source media="(min-width:900px)" srcset="./img/1920/project__company-6.jpg">
+                    <source media="(min-width:540px)" srcset="./img/768/project__company-6-768.jpg">
+                    <source media="(max-width:540px)" srcset="">
+                    <img src="./img/1920/project__company-6.jpg" alt="#" class="swiper-4__img">
+                  </picture>
                 </div>
                 <div class="swiper-slide" tabindex="0">
-                  <img src="./img/1920/project__company-7.jpg" alt="#" class="swiper-4__img">
+                  <picture>
+                    <source media="(min-width:900px)" srcset="./img/1920/project__company-7.jpg">
+                    <source media="(min-width:540px)" srcset="./img/768/project__company-7-768.jpg">
+                    <source media="(max-width:540px)" srcset="">
+                    <img src="./img/1920/project__company-7.jpg" alt="#" class="swiper-4__img">
+                  </picture>
                 </div>
                 <div class="swiper-slide" tabindex="0">
-                  <img src="./img/1920/project__company-8.jpg" alt="#" class="swiper-4__img">
+                  <picture>
+                    <source media="(min-width:900px)" srcset="./img/1920/project__company-8.jpg">
+                    <source media="(min-width:540px)" srcset="./img/768/project__company-8-768.jpg">
+                    <source media="(max-width:540px)" srcset="">
+                    <img src="./img/1920/project__company-8.jpg" alt="#" class="swiper-4__img">
+                  </picture>
                 </div>
                 <div class="swiper-slide" tabindex="0">
-                  <img src="./img/1920/project__company-9.jpg" alt="#" class="swiper-4__img">
+                  <picture>
+                    <source media="(min-width:900px)" srcset="./img/1920/project__company-9.jpg">
+                    <source media="(min-width:540px)" srcset="./img/768/project__company-9-768.jpg">
+                    <source media="(max-width:540px)" srcset="">
+                    <img src="./img/1920/project__company-9.jpg" alt="#" class="swiper-4__img">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -976,7 +1079,7 @@
       <div class="container showroom__container">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="showroom__col-left">
-          <h3 class="subtitle showroom__subtitle">Шоурум №4</h3>
+          <h3 class="subtitle showroom__subtitle">Шоурум № 4</h3>
           <address>Леонтьевский переулок, дом 5/1</address>
         </div>
         <div class="showroom__col-center">
@@ -987,7 +1090,9 @@
             <label for="" class="showroom__label">
               <input class="swowroom__input swowroom__input--tel" type="tel" name="" id="" placeholder="Телефон*">
             </label>
-            <button class="btn showroom__btn" type="submit">Заказать обратный звонок</button>
+            <button class="btn showroom__btn" type="submit">
+              <div class="btn__text"></div>
+            </button>
           </form>
         </div>
         <div class="showroom__col-right">
@@ -1002,9 +1107,9 @@
           </ul>
         </div>
       </div>
-      <div class="map__wrap">
+      <!-- <div class="map__wrap">
         <div id="myMap1"></div>
-      </div>
+      </div> -->
     </section>
   </main>
 
@@ -1012,7 +1117,7 @@
     <div class="footer__wrapper">
       <div class="container footer__container">
         <a class="logo" href="#">
-          <img class="logo__img" src="./img/Лого.svg" alt="Logo">
+          <img class="logo__img" src="./img/logo.svg" alt="Logo">
         </a>
         <div class="footer__social">
           <a href="#" class="footer__social-link footer__social-link--1"></a>

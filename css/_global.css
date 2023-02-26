@@ -36,10 +36,11 @@ svg {
 body {
   min-width: 320px;
   font-family: "Open Sans", sans-serif;
-  /* font-size: var(--def-fs); */
+  font-size: var(--def-fs);
   font-weight: var(--def-fw);
   line-height: var(--def-lh);
-  word-wrap: break-word;
+  /* word-wrap: break-word; */
+  overflow-x: hidden;
 }
 
 .list-reset {
@@ -87,4 +88,24 @@ body {
 
 p {
   margin: 0;
+}
+
+
+@media (max-width: 700px) {
+  .container {
+    padding: 50px 15px;
+  }
+}
+
+@media (max-width: 540px) {
+  .title {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 12px;
+  }
+
+  :root {
+    --def-fs: 14px;
+    --def-lh: 28px;
+  }
 }

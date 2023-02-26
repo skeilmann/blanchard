@@ -24,3 +24,11 @@
   --s-bold: 600;
   --bold: 700;
 }
+
+@media (max-width: 540px) {
+
+  :root {
+    --def-fs: 14px;
+    --def-lh: 28px;
+  }
+}

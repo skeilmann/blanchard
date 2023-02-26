@@ -3,5 +3,17 @@
 }
 
 .about p {
-  width: 67%;
+  width: clamp(290px, 100%, 1080px);
+}
+
+@media (max-width: 700px) {
+  .about__container {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about__container {
+    padding-bottom: 40px;
+  }
 }

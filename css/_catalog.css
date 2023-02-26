@@ -6,12 +6,12 @@
 
 .catalog__wrap {
   display: flex;
+  justify-content: space-between;
 }
 
 .catalog__left {
   flex-shrink: 0;
-  width: 50%;
-  padding-right: 50px;
+  width: calc(50% - 25px);
 }
 
 .catalog__card {
@@ -27,6 +27,7 @@
 .catalog__card-img {
   width: 100%;
   margin-bottom: 22px;
+
   object-fit: cover;
 }
 
@@ -49,8 +50,8 @@
   color: var(--dark-gray);
 }
 
-.catalog_right {
-  width: 50%;
+.catalog__right {
+  width: calc(50% - 25px);
 }
 
 .catalog__item {
@@ -72,16 +73,12 @@
   color: var(--dark-gray);
 }
 
-.catalog__content-wrap {
-  width: 94%;
-}
-
 .catalog__artist {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   margin: 25px 0;
-  column-gap: 25px;
 }
 
 .catalog__artist-name {
@@ -124,7 +121,7 @@
   position: absolute;
   bottom: -4px;
   left: 0;
-  width: 110%;
+  width: 100%;
   height: 1px;
   background-color: var(--dark-acc);
   transition: transform .5s;
@@ -209,4 +206,158 @@
   font-weight: 600;
   line-height: 22px;
   color: var(--acc);
+}
+
+@media (max-width: 1500px) {
+  .catalog__artist-name {
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .catalog__wrap {
+    flex-direction: column;
+  }
+
+  .catalog__left {
+    order: 2;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .catalog__right {
+    /* order: 1; */
+    width: 100%;
+    padding-bottom: 51px;
+  }
+
+  .catalog__desc {
+    margin-bottom: 20px;
+  }
+
+  .catalog__content-wrap {
+    width: 100%;
+  }
+
+  .catalog__artist-name {
+    width: 33%;
+  }
+
+  .catalog__card-img {
+    margin-bottom: 12px;
+  }
+
+  .catalog__card-name {
+    margin-bottom: 7px;
+  }
+
+  .catalog__subtitle {
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 700px) {
+  .catalog__artist-name {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .catalog__artist-name {
+    width: 100%;
+  }
+
+  .catalog__desc {
+    display: none;
+  }
+
+  .btn--catalog {
+    padding: 20px 0;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .catalog__unknown-title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .catalog__artist {
+    margin-top: 21px;
+  }
+
+  .catalog__artist-name {
+    margin-bottom: 2px;
+  }
+
+  .artist {
+    font-size: 16px;
+  }
+
+  .catalog__card-name {
+    margin-bottom: 4px;
+  }
+
+  .catalog__subtitle {
+    margin-bottom: 14px;
+  }
+
+  .catalog__card-desc {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .catalog__unknown-image {
+    width: 80%;
+    height: 126px;
+    border-width: 4px;
+  }
+
+  .catalog__unknown-container {
+    margin-top: 19px;
+    margin-bottom: 22px;
+
+    gap: 25px;
+  }
+
+  .catalog__unknown-wrap {
+    width: unset;
+  }
+
+  .catalog__unknown-title {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .catalog__unknown-desc {
+    margin-bottom: 3px;
+  }
+
+  .catalog__card-img--null {
+    height: 181px;
+    margin-bottom: 21px;
+    padding: 25px 79px;
+  }
+
+  .catalog__card-img--null>img {
+    height: 82%;
+    margin-bottom: 2px;
+
+    object-fit: contain;
+  }
+
+  .catalog__card-img--null>h4 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  [data-target="art0"]>.catalog__card-name {
+    margin-bottom: 7px;
+  }
+
+  [data-target="art0"]>.catalog__card-desc {
+    width: 90%;
+    margin-bottom: 2px;
+    line-height: 22px;
+  }
 }

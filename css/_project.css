@@ -6,6 +6,10 @@
   max-width: 1080px;
 }
 
+.project__desc--2 {
+  display: none;
+}
+
 .project__more:hover {
   color: var(--acc);
 }
@@ -129,4 +133,59 @@
 .swiper-4 .swiper-slide:focus-visible {
   outline: none;
   border-color: var(--acc);
+}
+
+@media (max-width: 1200px) {
+  .project__swiper {
+    padding-left: 53px;
+    padding-right: 53px;
+    height: 130px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .project__subtitle {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+
+  .project__swiper {
+    height: 107px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project__container {
+    padding-bottom: 28px;
+  }
+
+  .project__desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .btn--tippy {
+    left: 1px;
+  }
+
+  .project__desc {
+    display: none;
+  }
+
+  .project__desc--2 {
+    display: block;
+  }
+
+  .project__subtitle {
+    font-size: 18px;
+    margin-top: 53px;
+    margin-bottom: 13px;
+  }
+
+  .project__swiper {
+    height: 64px;
+    padding: 0 47px;
+  }
 }

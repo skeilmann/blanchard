@@ -4,17 +4,25 @@
 
 .showroom__container {
   display: flex;
-  gap: 80px;
   align-items: center;
+  flex-wrap: wrap;
   padding-top: 36px;
   padding-bottom: 37px;
+  padding-bottom: 20px;
+}
+
+.showroom__container>div:not(:last-child) {
+  margin-right: 80px;
+}
+
+.showroom__container>div {
+  margin-bottom: 30px;
 }
 
 .showroom__subtitle {
   margin: 0;
-  /* margin-bottom: 7px; */
-  font-weight: 600;
   font-size: 24px;
+  font-weight: 600;
 }
 
 .showroom__subtitle--2 {
@@ -22,25 +30,34 @@
 }
 
 address {
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
   line-height: 32px;
   color: var(--dark-gray);
-  font-style: normal;
 }
 
 .showroom__form {
   display: flex;
-  gap: 21px;
   flex-wrap: wrap;
+
+  gap: 21px;
+}
+
+.showroom__form:not(:last-child) {
+  margin-right: 20px;
+}
+
+.showroom__label {
+  width: 269px;
 }
 
 .swowroom__input {
+  width: 100%;
   height: 50px;
-  border-radius: 100px;
-  width: 269px;
   padding: 9px 24px;
   border: 1px solid var(--dark-gray);
+  border-radius: 100px;
   transition: background-color .3s;
 }
 
@@ -56,39 +73,38 @@ address {
   outline: none;
 }
 
-
 .showroom__btn {
   height: 50px;
-  border-radius: 100px;
   padding: 12px 34px;
-  background-color: transparent;
-  /* vertical-align: middle; */
-  color: var(--acc);
-  transition-property: background-color, color;
-  transition-duration: .3s;
+  border-radius: 100px;
   line-height: 24px;
+  color: var(--acc);
+  background-color: transparent;
+  transition-duration: .3s;
+  transition-property: background-color, color;
+}
+
+.showroom__btn::before {
+  content: "Заказать обратный звонок";
+  width: 100%;
+  height: 100%;
 }
 
 .showroom__btn:hover {
-  background-color: var(--acc);
   color: var(--white);
+  background-color: var(--acc);
 }
 
 .showroom__btn:focus-visible {
-  outline-offset: 1px;
   outline: 1px solid var(light-acc);
+  outline-offset: 1px;
 }
 
 .showroom__btn:active {
-  outline: 3px solid var(--light-acc);
-  background-color: var(--dark-acc);
   border-color: var(--dark-acc);
   color: var(--white);
-}
-
-.showroom__item {
-  /* padding-top: 8px;
-  padding-left: 1px; */
+  outline: 3px solid var(--light-acc);
+  background-color: var(--dark-acc);
 }
 
 .showroom__icons {
@@ -98,26 +114,26 @@ address {
 
 .icon {
   content: "";
+  display: inline-block;
   width: 40px;
   height: 40px;
-  display: inline-block;
+  border-radius: 100%;
+  vertical-align: middle;
   background-repeat: no-repeat;
   background-size: contain;
-  border-radius: 100%;
   transition: filter .3s;
-  vertical-align: middle;
 }
 
 .icon:is( :hover:not(:active),
   :focus-visible) {
-  filter: opacity(50%);
   outline: none;
+
+  filter: opacity(50%);
 }
 
 .icon:active {
   outline: 1px solid var(--dark-acc);
 }
-
 
 .icon--wa {
   background-image: url("../img/1920/icon--wa.jpg");
@@ -128,7 +144,7 @@ address {
 }
 
 .swowroom__input.is-invalid:not(:focus) {
-  border-color: #D11616;
+  border-color: #d11616;
   color: var(--light-gray);
 }
 
@@ -136,4 +152,120 @@ address {
   padding-left: 20px;
   font-size: 12px;
   line-height: 14px;
+}
+
+@media (max-width: 1500px) {
+  .showroom__container {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 41px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .showroom__container>div:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .showroom__btn {
+    padding: 12px 40px;
+  }
+
+  .showroom__container>div {
+    margin-bottom: 23px;
+  }
+
+  .showroom__subtitle {
+    margin-bottom: 4px;
+  }
+
+  .showroom address {
+    font-size: 14px;
+  }
+
+  .showroom .showroom__col-center {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .showroom__label {
+    width: calc(50% - 11px);
+  }
+
+  .showroom__form {
+    justify-content: space-between;
+
+    gap: 12px;
+  }
+
+  .showroom__btn {
+    padding: 12px 28px;
+  }
+
+  .showroom__col-right .showroom__subtitle {
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 650px) {
+  .showroom__label {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .showroom {
+    border: none;
+  }
+
+  .showroom__btn::before {
+    content: "Заказать";
+  }
+
+  .showroom__container {
+    padding-top: 21px;
+  }
+
+  .showroom__subtitle {
+    margin-bottom: -4px;
+    font-size: 18px;
+  }
+
+  .swowroom__input {
+    height: 41px;
+  }
+
+  .showroom__container>div {
+    margin-bottom: 13px;
+  }
+
+  .showroom__form {
+    gap: 19px;
+  }
+
+  .showroom__btn {
+    height: 41px;
+    padding: 11px 33px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+  }
+
+  .showroom .showroom__col-center {
+    margin-bottom: 22px;
+  }
+
+  .showroom__col-right .showroom__subtitle {
+    font-weight: 400;
+  }
+
+  .showroom .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .showroom__col-right .showroom__subtitle {
+    margin-bottom: 9px;
+  }
 }

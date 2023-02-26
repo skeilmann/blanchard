@@ -171,7 +171,7 @@ address {
     padding: 12px 40px;
   }
 
-  .showroom__container>div {
+  .showroom__container>div:not(:last-child) {
     margin-bottom: 23px;
   }
 
@@ -236,8 +236,16 @@ address {
     height: 41px;
   }
 
-  .showroom__container>div {
+  .showroom__container>div:not(:last-child) {
     margin-bottom: 13px;
+  }
+
+  .showroom__container>div:nth-child(3) {
+    margin-bottom: 22px;
+  }
+
+  .showroom__container>div:last-child {
+    margin-bottom: 0;
   }
 
   .showroom__form {

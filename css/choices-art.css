@@ -129,4 +129,10 @@
   .gallery__choose-item {
     font-size: 16px;
   }
+
+  .gallery__select-wrap .choices__list--dropdown,
+  .gallery__select-wrap .choices__list[aria-expanded] {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+  }
 }

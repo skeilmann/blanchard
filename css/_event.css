@@ -288,10 +288,7 @@
     padding-top: 20px;
   }
 
-  .swiper-pagination-fraction,
-  .swiper-pagination-custom,
-  .swiper-horizontal>.swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
+  .event__swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
     margin: 0 13px;
   }
 }

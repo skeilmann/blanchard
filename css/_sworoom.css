@@ -96,7 +96,7 @@ address {
 }
 
 .showroom__btn:focus-visible {
-  outline: 1px solid var(light-acc);
+  outline: 1px solid var(--light-acc);
   outline-offset: 1px;
 }
 

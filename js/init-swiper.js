@@ -101,7 +101,9 @@ const swiper3 = new Swiper('.swiper-3', {
     },
 
     1300: {
-      spaceBetween: 50
+      spaceBetween: 50,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
     },
   }
 });

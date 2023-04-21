@@ -8,30 +8,6 @@
   overflow: auto;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  min-height: 100vh;
-}
-
-a {
-  text-decoration: none;
-}
-
-.reset-list {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
 .main__list {
   display: flex;
   align-items: center;
@@ -40,9 +16,9 @@ a {
 .main__item {
   position: relative;
   color: gray;
-  margin-right: 30px;
+  /* margin-right: 30px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 20px; */
 }
 
 .main__item-btn {
@@ -55,7 +31,7 @@ a {
   background-color: transparent;
   font-size: 18px;
   font-weight: 400;
-  color: gray;
+  color: var(--white);
   transition: color 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -80,7 +56,7 @@ a {
 }
 
 .main__item-btn.is-active {
-  color: red;
+  color: var(--dark-acc);
 }
 
 .main__item-btn.is-active::after {
@@ -93,12 +69,11 @@ a {
 
 .main__dropdown {
   position: absolute;
-  bottom: 0;
+  top: 45px;
   left: 0;
   display: none;
   padding: 40px 20px 40px 40px;
   background-color: rgba(0, 0, 0, 0.6);
-  transform: translateY(100%);
 }
 
 .main__dropdown-wrap .simplebar-wrapper {
@@ -138,13 +113,12 @@ a {
 .main__item-link {
   position: relative;
   display: block;
-  padding: 10px 15px;
-  border: 2px solid transparent;
+  padding: 4px 12px 5px;
   font-size: 14px;
   color: #fff;
-  background-color: #000;
-  background-origin: border-box;
   transition: border-color 0.3s ease;
+  font-weight: 600;
+  background-size: cover;
 }
 
 .main__item-link::before {
@@ -154,17 +128,26 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(194, 131, 243, 0.4);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  /* opacity: 0; */
+  background-image: linear-gradient(#C283F366 0 0);
+  background-size: 200%;
+  background-position: 200%;
+  background-repeat: no-repeat;
+  transition: background-size .4s, background-position .4s;
+}
+
+.main__item-link::before:hover {
+  transition: background-size .4s, background-position .4s;
+  background-size: 200% 100%;
+  background-position: 100%;
 }
 
 .main__item-link--tintoretto {
-  background-image: url("http://placeimg.com/220/40/nature");
+  background-image: url('../img/1920/header_m-0a.webp');
 }
 
 .main__item-link--fridrih {
-  background-image: url("http://placeimg.com/220/40/arch");
+  background-image: url("../img/1920/header_m-0b.webp");
 }
 
 .main__item-text {
@@ -186,9 +169,7 @@ a {
   background-color: #000;
 }
 
-.main__dropdown
-  .simplebar-track.simplebar-vertical
-  .simplebar-scrollbar:before {
+.main__dropdown .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
   top: 0;
   bottom: 0;
   left: 0;
@@ -200,17 +181,23 @@ a {
 @keyframes dropdownOpen {
   from {
     opacity: 0;
+    transform: translateY(-25px);
   }
+
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes dropdownClose {
   from {
     opacity: 1;
+    transform: translateY(0);
   }
+
   to {
     opacity: 0;
+    transform: translateY(-25px);
   }
 }

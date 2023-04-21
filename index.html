@@ -16,6 +16,7 @@
   <link href="./css/choices.css" rel="stylesheet">
   <link href="./css/swiper-bundle.css" rel="stylesheet">
   <script src="./js/choices.js" defer></script>
+  <script src="./js/select-simple.js" defer></script>
   <script src="./js/init-choices.js" defer></script>
   <script src="./js/swiper-bundle.js" defer></script>
   <script src="./js/init-swiper.js" defer></script>
@@ -89,6 +90,26 @@
       <div class="container header__container">
         <div class="header__select-wrap">
           <ul class="list-reset header__nav2">
+            <ul class="main__list reset-list">
+              <li class="main__item">
+                <button class="main__item-btn js-header-dropdown-btn" data-path="one">
+                  <strong class="main__item-heading">Реализм</strong>
+                  <span class="main__item-icon"></span>
+                </button>
+                <div class="main__dropdown js-header-drop" data-target="one">
+                  <div class="main__dropdown-wrap" data-simplebar>
+                    <ul class="main__drop-list reset-list">
+                      <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--tintoretto"><span class="main__item-text">Тинторрето</span></a></li>
+                      <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--fridrih">Фридрих</a></li>
+                      <li class="main__dropdown-item"><a href="" class="main__item-link">Леонардо</a></li>
+                      <li class="main__dropdown-item"><a href="" class="main__item-link">Тинторрето</a></li>
+                      <li class="main__dropdown-item"><a href="" class="main__item-link">Тинторрето</a></li>
+                      <li class="main__dropdown-item"><a href="" class="main__item-link">Тинторрето</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
             <li class="header__nav2-item">
               <select class="select" name="select">
                 <option value="Realism">Реализм</option>
@@ -1102,6 +1123,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 
 </body>
 

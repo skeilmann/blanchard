@@ -51,7 +51,7 @@
   color: var(--light-acc2);
 }
 
-.header__link:focus-visible {
+.header__link:focus-visible:not(:active) {
   color: var(--white);
   outline: none;
   background-color: var(--dark-acc);
@@ -59,6 +59,7 @@
 
 .header__link:active {
   color: var(--dark-acc);
+  outline: none;
 }
 
 .header__btn {

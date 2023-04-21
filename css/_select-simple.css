@@ -129,25 +129,97 @@
   width: 100%;
   height: 100%;
   /* opacity: 0; */
-  background-image: linear-gradient(#C283F366 0 0);
+  background-image: linear-gradient(#c283f366 0 0);
   background-size: 200%;
   background-position: 200%;
   background-repeat: no-repeat;
-  transition: background-size .4s, background-position .4s;
+  transition: background-size 0.4s, background-position 0.4s;
 }
 
-.main__item-link::before:hover {
-  transition: background-size .4s, background-position .4s;
+.main__item-link:hover::before {
+  transition: background-size 0.4s, background-position 0.4s;
   background-size: 200% 100%;
   background-position: 100%;
 }
 
-.main__item-link--tintoretto {
-  background-image: url('../img/1920/header_m-0a.webp');
+.main__item-link--tintoreto {
+  background-image: url("../img/1920/header_m-0a.webp");
 }
 
-.main__item-link--fridrih {
+.main__item-link--fred {
   background-image: url("../img/1920/header_m-0b.webp");
+}
+
+.main__item-link--ver {
+  background-image: url("../img/1920/header_m-0c.webp");
+}
+
+.main__item-link--leo {
+  background-image: url("../img/1920/header_m-0d.webp");
+}
+
+.main__item-link--mone {
+  background-image: url("../img/1920/header_m-1a.webp");
+}
+
+.main__item-link--sisley {
+  background-image: url("../img/1920/header_m-1b.webp");
+}
+
+.main__item-link--mane {
+  background-image: url("../img/1920/header_m-1c.webp");
+}
+
+.main__item-link--renuar {
+  background-image: url("../img/1920/header_m-1d.webp");
+}
+
+.main__item-link--van {
+  background-image: url("../img/1920/header_m-2a.webp");
+}
+
+.main__item-link--sezan {
+  background-image: url("../img/1920/header_m-2b.webp");
+}
+
+.main__item-link--gogen {
+  background-image: url("../img/1920/header_m-2c.webp");
+}
+
+.main__item-link--sera {
+  background-image: url("../img/1920/header_m-2d.webp");
+}
+
+.main__item-link--can {
+  background-image: url("../img/1920/header_m-3a.webp");
+}
+
+.main__item-link--marineti {
+  background-image: url("../img/1920/header_m-3b.webp");
+}
+
+.main__item-link--malevich {
+  background-image: url("../img/1920/header_m-3c.webp");
+}
+
+.main__item-link--picasso {
+  background-image: url("../img/1920/header_m-3d.webp");
+}
+
+.main__item-link--cara {
+  background-image: url("../img/1920/header_m-4a.webp");
+}
+
+.main__item-link--pratela {
+  background-image: url("../img/1920/header_m-4b.webp");
+}
+
+.main__item-link--severini {
+  background-image: url("../img/1920/header_m-4c.webp");
+}
+
+.main__item-link--bala {
+  background-image: url("../img/1920/header_m-4d.webp");
 }
 
 .main__item-text {
@@ -169,7 +241,9 @@
   background-color: #000;
 }
 
-.main__dropdown .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+.main__dropdown
+  .simplebar-track.simplebar-vertical
+  .simplebar-scrollbar:before {
   top: 0;
   bottom: 0;
   left: 0;

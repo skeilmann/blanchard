@@ -13,10 +13,13 @@
 @keyframes search-open {
   from {
     transform: scaleX(0);
+    transform-origin: right;
     opacity: 0;
   }
+
   to {
     transform: scaleX(1);
+    transform-origin: right;
     opacity: 1;
   }
 }
@@ -24,10 +27,13 @@
 @keyframes search-close {
   from {
     transform: scaleX(1);
+    transform-origin: right;
     opacity: 1;
   }
+
   to {
     transform: scaleX(0);
+    transform-origin: right;
     opacity: 0;
   }
 }

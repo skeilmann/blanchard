@@ -1,3 +1,4 @@
+
 function setSearch(params) {
   const openBtn = document.querySelector(`.${params.openBtnClass}`);
   const search = document.querySelector(`.${params.searchClass}`);
@@ -39,13 +40,12 @@ function setSearch(params) {
       search.classList.add(params.hiddenClass);
     }
   });
-
-  setSearch({
-    openBtnClass: "js-open-search", // класс кнопки открытия
-    closeBtnClass: "js-close", // класс кнопки закрытия
-    searchClass: "js-form", // класс формы поиска
-    activeClass: "is-opened", // класс открытого состояния
-    hiddenClass: "is-closed", // класс закрывающегося состояния (удаляется сразу после закрытия)
-  });
 }
-//'""
+
+setSearch({
+  openBtnClass: "js-open-search", // класс кнопки открытия
+  closeBtnClass: "nav__delete-btn", // класс кнопки закрытия
+  searchClass: "js-form", // класс формы поиска
+  activeClass: "is-opened", // класс открытого состояния
+  hiddenClass: "is-closed" // класс закрывающегося состояния (удаляется сразу после закрытия)
+});

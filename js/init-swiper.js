@@ -4,9 +4,10 @@ const swiper1 = new Swiper('.swiper-1', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 10000,
+  },
+  speed: 10000,
   effect: 'fade',
   fadeEffect: {
     crossFade: true

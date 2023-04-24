@@ -103,7 +103,9 @@
 }
 
 @media (max-width: 1500px) {
-  .gallery__select-wrap {
+
+  .gallery__select-wrap,
+  .gallery__select-wrap .choices__list[aria-expanded] {
     width: 281px;
   }
 }
@@ -111,6 +113,10 @@
 @media (max-width: 900px) {
   .gallery__select-wrap {
     margin-bottom: 40px;
+  }
+
+  .gallery__select-wrap .choices__list[aria-expanded] {
+    background: rgba(0, 0, 0, 1);
   }
 }
 

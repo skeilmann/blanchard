@@ -182,7 +182,7 @@
 }
 
 .swiper-2 {
-  height: 315px;
+  height: 350px;
 }
 
 .swiper-slide-zoomed {
@@ -272,7 +272,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 0 50px; */
+  overflow: auto;
 }
 
 .card {
@@ -470,6 +470,10 @@ picture {
 
   .card__img {
     width: calc(50% - 33px);
+  }
+
+  .swiper-2 {
+    height: 315px;
   }
 }
 

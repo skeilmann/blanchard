@@ -6,9 +6,9 @@
   margin-left: -8px;
   /* transition: background-color .5s; */
   background-image: linear-gradient(var(--acc) 0 0);
-  background-size: 200%;
-  background-position: 200%;
   background-repeat: no-repeat;
+  background-position: 200%;
+  background-size: 200%;
   transition: background-size .4s, background-position .4s;
 }
 
@@ -24,17 +24,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(#C283F366 0 0);
-  background-size: 200%;
-  background-position: 200%;
+  background-image: linear-gradient(#c283f366 0 0);
   background-repeat: no-repeat;
+  background-position: 200%;
+  background-size: 200%;
   transition: background-size .4s, background-position .4s;
 }
 
 .is-highlighted.choices__item--selectable::after {
-  transition: background-size .4s, background-position .4s;
-  background-size: 200% 100%;
   background-position: 100%;
+  background-size: 200% 100%;
+  transition: background-size .4s, background-position .4s;
 }
 
 .is-highlighted.choices__item--selectable {
@@ -45,20 +45,6 @@
 .choices__item {
   color: var(--white);
 }
-
-/* .choices__item.choices__placeholder:hover {
-  color: var(--acc);
-} */
-
-/* .choices__item.choices__item--selectable:hover {
-  color: var(--acc);
-} */
-
-/* .choices__item .choices__item--selectable:active {
-  color: var(--dark-acc);
-} */
-
-
 
 .choices:last-child {
   margin-bottom: 0;
@@ -81,11 +67,10 @@
 }
 
 .choices:focus-visible:not(:hover) {
-  /* background-color: var(--dark-acc); */
-  transition: background-size .4s, background-position .4s;
-  background-size: 200% 100%;
-  background-position: 100%;
   outline: none;
+  background-position: 100%;
+  background-size: 200% 100%;
+  transition: background-size .4s, background-position .4s;
 }
 
 .choices[data-type*=select-one] {
@@ -94,21 +79,21 @@
 
 .choices__inner::after {
   content: "";
-  height: 8px;
+  position: absolute;
+  top: 50%;
+  right: 17.5px;
   width: 8px;
+  height: 8px;
+  margin-top: -3px;
+  border-width: 1px;
   border-style: solid;
   border-color: transparent var(--white) var(--white) transparent;
-  border-width: 1px;
-  position: absolute;
-  right: 17.5px;
-  top: 50%;
-  margin-top: -3px;
-  pointer-events: none;
-  transform: rotate(45deg);
-  transition-property: border-color, transform;
-  transition-duration: .3s;
   transition-timing-function: ease-in-out;
+  transition-duration: .3s;
+  transition-property: border-color, transform;
+  transform: rotate(45deg);
   transform-origin: 80% 80%;
+  pointer-events: none;
 }
 
 .choices.is-open .choices__inner::after {
@@ -138,10 +123,9 @@
 
 .choices__inner {
   font-size: 18px;
-  line-height: 25px;
   font-weight: 400;
+  line-height: 25px;
 }
-
 
 .choices__list--single .choices__item--selectable {
   margin: 5px;
@@ -151,20 +135,11 @@
 
 .choices__list--dropdown,
 .choices__list[aria-expanded] {
-  z-index: 1000;
   position: absolute;
-  width: 300px;
-  height: 300px;
-  padding: 40px;
-  padding-right: 19px;
-  background: rgba(0, 0, 0, 0.5);
-  top: 50px;
   word-break: break-all;
   opacity: 0;
-  transform: translateY(-10%);
-  transition-property: transform, opacity;
   transition-duration: .4s;
-  pointer-events: none;
+  transition-property: transform, opacity;
 }
 
 .choices__list::-webkit-scrollbar {
@@ -179,8 +154,12 @@
   background: var(--white);
 }
 
+.choices__list[aria-expanded='false'] {
+  pointer-events: none;
+}
+
 .is-active.choices__list--dropdown,
-.is-active.choices__list[aria-expanded] {
+.is-active.choices__list[aria-expanded='true'] {
   opacity: 1;
   transform: translateY(0);
   pointer-events: all;
@@ -189,9 +168,10 @@
 .choices__list--dropdown .choices__list,
 .choices__list[aria-expanded] .choices__list {
   position: relative;
+  overflow-y: scroll;
   max-height: 220px;
   padding-right: 19px;
-  overflow-y: scroll;
+
   -webkit-overflow-scrolling: touch;
   will-change: scroll-position;
 }
@@ -199,11 +179,11 @@
 .choices__list--dropdown .choices__item,
 .choices__list[aria-expanded] .choices__item {
   position: relative;
+  margin-bottom: 20px;
   padding: 9px 14px 12px;
   font-size: 14px;
-  line-height: 19px;
   font-weight: 600;
-  margin-bottom: 20px;
+  line-height: 19px;
 }
 
 .choices__list--dropdown .choices__item,
@@ -216,8 +196,8 @@
 }
 
 .choices__placeholder {
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 25px;
   text-align: center;
   /* color: var(--white); */

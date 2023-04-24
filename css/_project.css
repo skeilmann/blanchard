@@ -1,9 +1,10 @@
 .project__container {
-  padding-top: 0;
+  padding-top: 40px;
 }
 
 .project__desc {
   max-width: 1080px;
+  margin-bottom: 20px;
 }
 
 .project__desc--2 {
@@ -42,7 +43,7 @@
 }
 
 .project__subtitle {
-  margin-top: 21px;
+  /* margin-top: 21px; */
   margin-bottom: 21px;
   font-size: 24px;
   font-weight: 600;

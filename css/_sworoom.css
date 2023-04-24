@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   padding-top: 36px;
   padding-bottom: 37px;
-  padding-bottom: 20px;
+  padding-bottom: 6px;
 }
 
 .showroom__container>div:not(:last-child) {
@@ -136,11 +136,11 @@ address {
 }
 
 .icon--wa {
-  background-image: url("../img/1920/icon--wa.jpg");
+  background-image: url("../img/1920/icon--wa.webp");
 }
 
 .icon--tg {
-  background-image: url("../img/1920/icon--tg.jpg");
+  background-image: url("../img/1920/icon--tg.webp");
 }
 
 .swowroom__input.is-invalid:not(:focus) {

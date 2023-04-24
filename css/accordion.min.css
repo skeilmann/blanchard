@@ -2,10 +2,10 @@
 
 .ac {
   box-sizing: border-box;
-  ;
   /* margin-top:10px; */
   border: 1px solid #eeeeee;
   background-color: #ffffff;
+  ;
 }
 
 .ac .ac-header {
@@ -18,13 +18,13 @@
   display: block;
   width: 100%;
   margin: 0;
+  border-top: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
   text-align: left;
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
-  transition: color .3s;
-  border-top: 1px solid #cacaca;
-  border-bottom: 1px solid #CACACA;
+  transition: border, color .3s;
 }
 
 .ac:first-of-type .ac-trigger {
@@ -36,10 +36,14 @@
 }
 
 .ac-trigger:hover {
+  z-index: 10;
   border-top: 1px solid var(--acc);
   border-bottom: 1px solid var(--acc);
-  transition: border, color 0.3s;
   color: var(--light-acc);
+}
+
+.ac-trigger:active {
+  border-color: var(--dark-acc);
 }
 
 .ac .ac-trigger::before {
@@ -52,9 +56,10 @@
   border-radius: 50%;
   text-align: center;
   background-color: var(--light-gray2);
+  transition: background-color .6s;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%) rotate(-45deg);
-  transition: background-color .6s;
+  transition: border, background-color .3s;
 }
 
 .ac .ac-trigger::after {
@@ -67,24 +72,23 @@
   border-bottom: 1px solid var(--dark-gray);
   border-left: 1px solid var(--dark-gray);
   text-align: center;
-
-  transform: translateY(-60%) rotate(-45deg);
   transition: transform .3s;
+  transform: translateY(-60%) rotate(-45deg);
 }
 
 .ac .ac-panel {
   overflow: hidden;
   transition-timing-function: ease;
-  ;
   transition-property: height, visibility;
+  ;
 }
 
 .ac .ac-panel .ac-text {
   margin: 0;
-  ;
   padding: 10px;
   font: 15px/24px Arial, sans-serif;
   color: #111111;
+  ;
 }
 
 .ac.js-enabled .ac-panel {
@@ -99,14 +103,13 @@
   transform: translateY(-40%) rotate(135deg);
 }
 
-
 .ac.is-active .ac-trigger::before {
+  border: 2px solid var(--acc);
   background-color: var(--light-acc);
-  border: 2px solid var(--acc)
 }
 
 .ac.is-active .btn--catalog {
-  border-color: var(--acc);
+  border-color: var(--dark-acc);
 }
 
 @media (max-width: 500px) {
@@ -116,8 +119,8 @@
   }
 
   .ac .ac-trigger::after {
+    right: 11px;
     width: 7px;
     height: 7px;
-    right: 11px;
   }
 }

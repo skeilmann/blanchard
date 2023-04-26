@@ -304,16 +304,11 @@
   padding: 121px 50px 90px;
 }
 
-.card__title,
-.card__title--2 {
+.card__title {
   margin: 0;
   font-size: 24px;
   font-weight: 600;
   line-height: 33px;
-}
-
-.card__title--2 {
-  display: none;
 }
 
 .card__subtitle {

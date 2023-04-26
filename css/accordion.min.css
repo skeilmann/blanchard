@@ -108,7 +108,7 @@
   background-color: var(--light-acc);
 }
 
-.ac.is-active .btn--catalog {
+.ac.is-active .catalog__btn {
   border-color: var(--dark-acc);
 }
 

@@ -59,7 +59,7 @@
   width: 264px;
 }
 
-.btn--tippy {
+.btn-tippy {
   position: relative;
   bottom: 1px;
   left: -1px;
@@ -77,13 +77,13 @@
   transition: background-color .3s, color .3s;
 }
 
-.btn--tippy:active {
+.btn-tippy:active {
   background-color: var(--acc);
   color: var(--white);
 }
 
-.btn--tippy:focus-visible,
-.btn--tippy:hover {
+.btn-tippy:focus-visible,
+.btn-tippy:hover {
   outline: none;
   background-color: var(--light-acc);
 }

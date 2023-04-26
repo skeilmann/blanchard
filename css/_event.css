@@ -109,6 +109,10 @@
 
 .event__title {
   margin-bottom: 9px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
 }
 
 .link {
@@ -247,14 +251,6 @@
 }
 
 @media (max-width: 650px) {
-  .card__title {
-    display: none;
-  }
-
-  .card__title--2 {
-    display: block;
-  }
-
   .event .pagination {
     display: none;
   }

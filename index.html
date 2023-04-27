@@ -34,6 +34,7 @@
   </script>
   <script src="./js/map.js" defer></script>
   <script src="./js/just-validate.min.js" defer></script>
+  <script src="./js/input-mask.js" defer></script>
   <script src="./js/init-validation.js" defer></script>
   <script src="./js/micromodal.js" defer></script>
   <script src="./js/micromodal-init.js" defer></script>
@@ -84,19 +85,19 @@
           </ul>
           <button class="header__btn">Войти</button>
         </div>
-        <button class="nav__search-btn js-open-search" aria-label="Открыть поиск"></button>
+        <button class="header__search-btn js-open-search" aria-label="Открыть поиск"></button>
       </div>
     </nav>
     <div class="header__row-2 js-form">
       <div class="container header__container">
         <div class="header__select-wrap">
-          <ul class="header__nav2 main__list list-reset">
+          <ul class="header__nav2 main list-reset">
             <li class="main__item">
-              <button class="main__item-btn js-header-dropdown-btn" data-path="one">
-                <div class="main__item-heading">Реализм</div>
+              <button class="main__item-btn" data-path="one">
+                <span class="main__item-heading">Реализм</span>
                 <span class="main__item-icon"></span>
               </button>
-              <div class="main__dropdown js-header-drop" data-target="one">
+              <div class="main__dropdown" data-target="one">
                 <div class="main__dropdown-wrap" data-simplebar>
                   <ul class="main__drop-list reset-list">
                     <li class="main__dropdown-item">
@@ -123,11 +124,11 @@
               </div>
             </li>
             <li class="main__item">
-              <button class="main__item-btn js-header-dropdown-btn" data-path="two">
-                <div class="main__item-heading">Импрессионизм</div>
+              <button class="main__item-btn" data-path="two">
+                <span class="main__item-heading">Импрессионизм</span>
                 <span class="main__item-icon"></span>
               </button>
-              <div class="main__dropdown js-header-drop" data-target="two">
+              <div class="main__dropdown" data-target="two">
                 <div class="main__dropdown-wrap" data-simplebar>
                   <ul class="main__drop-list reset-list">
                     <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--mone">
@@ -151,11 +152,11 @@
               </div>
             </li>
             <li class="main__item">
-              <button class="main__item-btn js-header-dropdown-btn" data-path="three">
-                <div class="main__item-heading">Постимпрессионизм</div>
+              <button class="main__item-btn" data-path="three">
+                <span class="main__item-heading">Постимпрессионизм</span>
                 <span class="main__item-icon"></span>
               </button>
-              <div class="main__dropdown js-header-drop" data-target="three">
+              <div class="main__dropdown" data-target="three">
                 <div class="main__dropdown-wrap" data-simplebar>
                   <ul class="main__drop-list reset-list">
                     <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--van">
@@ -179,55 +180,66 @@
               </div>
             </li>
             <li class="main__item">
-              <button class="main__item-btn js-header-dropdown-btn" data-path="four">
-                <div class="main__item-heading">Авангард</div>
+              <button class="main__item-btn" data-path="four">
+                <span class="main__item-heading">Авангард</span>
                 <span class="main__item-icon"></span>
               </button>
-              <div class="main__dropdown js-header-drop" data-target="four">
+              <div class="main__dropdown" data-target="four">
                 <div class="main__dropdown-wrap" data-simplebar>
                   <ul class="main__drop-list reset-list">
                     <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--can">
                         <span class="main__item-text">Кандинский</span></a></li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--marineti">Маринетти</a></li>
+                        class="main__item-link main__item-link--marineti">Маринетти</a>
+                    </li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--malevich">Малевич</a></li>
+                        class="main__item-link main__item-link--malevich">Малевич</a>
+                    </li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--picasso">Пикассо</a></li>
+                        class="main__item-link main__item-link--picasso">Пикассо</a>
+                    </li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--malevich">Малевич</a></li>
+                        class="main__item-link main__item-link--malevich">Малевич</a>
+                    </li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--marineti">Маринетти</a></li>
+                        class="main__item-link main__item-link--marineti">Маринетти</a>
+                    </li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--malevich">Малевич</a></li>
+                        class="main__item-link main__item-link--malevich">Малевич</a>
+                    </li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--can">Кандинский</a></li>
+                        class="main__item-link main__item-link--can">Кандинский</a>
+                    </li>
                   </ul>
                 </div>
               </div>
             </li>
             <li class="main__item">
-              <button class="main__item-btn js-header-dropdown-btn" data-path="five">
-                <div class="main__item-heading">Футуризм</div>
+              <button class="main__item-btn" data-path="five">
+                <span class="main__item-heading">Футуризм</span>
                 <span class="main__item-icon"></span>
               </button>
-              <div class="main__dropdown js-header-drop" data-target="five">
+              <div class="main__dropdown" data-target="five">
                 <div class="main__dropdown-wrap" data-simplebar>
                   <ul class="main__drop-list reset-list">
                     <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--cara">
                         <span class="main__item-text">Карра</span></a></li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--pratela">Прателла</a></li>
+                        class="main__item-link main__item-link--pratela">Прателла</a>
+                    </li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--severini">Северини</a></li>
+                        class="main__item-link main__item-link--severini">Северини</a>
+                    </li>
                     <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--bala">Балла</a>
                     </li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--severini">Северини</a></li>
+                        class="main__item-link main__item-link--severini">Северини</a>
+                    </li>
                     <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--cara">Карра</a>
                     </li>
                     <li class="main__dropdown-item"><a href=""
-                        class="main__item-link main__item-link--severini">Северини</a></li>
+                        class="main__item-link main__item-link--severini">Северини</a>
+                    </li>
                     <li class="main__dropdown-item"><a href="" class="main__item-link main__item-link--bala">Балла</a>
                     </li>
                   </ul>
@@ -236,14 +248,14 @@
             </li>
           </ul>
         </div>
-        <div class="nav__search-container">
-          <form id="search-form" class="nav__search-form" action="https://jsonplaceholder.typicode.com/posts"
+        <div class="header__search-container">
+          <form id="search-form" class="header__search-form" action="https://jsonplaceholder.typicode.com/posts"
             method="POST">
-            <button class="nav__search-btn search-btn" type="submit">
+            <button class="header__search-btn search-btn" type="submit">
             </button>
-            <input class="nav__search-input search-input" name="searching" type="text" aria-label="Искать на всём сайте"
-              placeholder="Поиск по саиту">
-            <button class="btn nav__delete-btn" type="button" aria-label="очистить поиск">&times;</button>
+            <input class="header__search-input search-input" name="searching" type="text"
+              aria-label="Искать на всём сайте" placeholder="Поиск по саиту">
+            <button class="btn header__delete-btn" type="button" aria-label="очистить поиск">&times;</button>
           </form>
         </div>
       </div>
@@ -695,7 +707,7 @@
               <li class="catalog__item ac">
                 <h3 class="catalog__subtitle ac-header">
                   <button class="catalog__btn ac-trigger">
-                    <span class="catalog__btn-text">C 1400 по 1499 гг</span>
+                    <span class="btn-text">C 1400 по 1499 гг</span>
                   </button>
                 </h3>
                 <div class="catalog__content ac-panel">
@@ -785,7 +797,7 @@
               <li class="catalog__item ac">
                 <h3 class="catalog__subtitle ac-header">
                   <button class="catalog__btn ac-trigger">
-                    <span class="catalog__btn-text">C 1500 по 1599 гг</span>
+                    <span class="btn-text">C 1500 по 1599 гг</span>
                   </button>
                 </h3>
                 <div class="catalog__content ac-panel">
@@ -805,7 +817,7 @@
               <li class="catalog__item ac">
                 <h3 class="catalog__subtitle ac-header">
                   <button class="catalog__btn ac-trigger">
-                    <span class="catalog__btn-text">C 1600 по 1699 гг</span>
+                    <span class="btn-text">C 1600 по 1699 гг</span>
                   </button>
                 </h3>
                 <div class="catalog__content ac-panel">
@@ -828,7 +840,7 @@
               <li class="catalog__item ac">
                 <h3 class="catalog__subtitle ac-header">
                   <button class="catalog__btn ac-trigger">
-                    <span class="catalog__btn-text">C 1700 по 1799 гг</span>
+                    <span class="btn-text">C 1700 по 1799 гг</span>
                   </button>
                 </h3>
                 <div class="catalog__content ac-panel">
@@ -849,7 +861,7 @@
               <li class="catalog__item ac">
                 <h3 class="catalog__subtitle ac-header">
                   <button class="catalog__btn ac-trigger">
-                    <span class="catalog__btn-text">C 1800 по 1899 гг</span>
+                    <span class="btn-text">C 1800 по 1899 гг</span>
                   </button>
                 </h3>
                 <div class="catalog__content ac-panel">
@@ -872,7 +884,7 @@
               <li class="catalog__item ac">
                 <h3 class="catalog__subtitle ac-header">
                   <button class="catalog__btn ac-trigger">
-                    <span class="catalog__btn-text">C 1900 по 1999 гг</span>
+                    <span class="btn-text">C 1900 по 1999 гг</span>
                   </button>
                 </h3>
                 <div class="catalog__content ac-panel">
@@ -893,7 +905,7 @@
               <li class="catalog__item ac">
                 <h3 class="catalog__subtitle ac-header">
                   <button class="catalog__btn ac-trigger">
-                    <span class="catalog__btn-text">C 2000 г</span>
+                    <span class="btn-text">C 2000 г</span>
                   </button>
                 </h3>
                 <div class="catalog__content ac-panel">
@@ -1136,14 +1148,14 @@
         <div class="showroom__col-center">
           <form class="showroom__form" action="POST" method="post">
             <label for="name" class="showroom__label">
-              <input class="swowroom__input swowroom__input--name" type="text" name="name" id="name" placeholder="Имя*">
+              <input class="showroom__input showroom__input--name" type="text" name="name" id="name" placeholder="Имя*">
             </label>
             <label for="tel" class="showroom__label">
-              <input class="swowroom__input swowroom__input--tel" type="tel" name="telephone" id="tel"
+              <input class="showroom__input showroom__input--tel" type="tel" name="telephone" id="tel"
                 placeholder="Телефон*">
             </label>
             <button class="btn showroom__btn" type="submit">
-              <span class="catalog__btn-text"></span>
+              <span class="btn-text"></span>
             </button>
           </form>
         </div>
@@ -1159,7 +1171,7 @@
           </ul>
         </div>
       </div>
-      <div class="map__wrap">
+      <div class="map">
         <div id="myMap1"></div>
       </div>
     </section>

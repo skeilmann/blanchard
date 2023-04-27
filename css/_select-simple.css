@@ -9,11 +9,6 @@
   overflow: auto;
 }
 
-.main__list {
-  display: flex;
-  align-items: center;
-}
-
 .main__item {
   position: relative;
   color: gray;

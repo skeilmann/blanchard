@@ -50,9 +50,10 @@ address {
 
 .showroom__label {
   width: 269px;
+  position: relative;
 }
 
-.swowroom__input {
+.showroom__input {
   width: 100%;
   height: 50px;
   padding: 9px 24px;
@@ -65,11 +66,11 @@ address {
   color: var(--light-gray);
 }
 
-.swowroom__input:hover:not(:focus) {
+.showroom__input:hover:not(:focus) {
   background-color: var(--light-gray2);
 }
 
-.swowroom__input:focus {
+.showroom__input:focus {
   outline: none;
 }
 
@@ -143,7 +144,7 @@ address {
   background-image: url("../img/1920/icon--tg.webp");
 }
 
-.swowroom__input.is-invalid:not(:focus) {
+.showroom__input.is-invalid:not(:focus) {
   border-color: #d11616;
   color: var(--light-gray);
 }
@@ -232,7 +233,7 @@ address {
     font-size: 18px;
   }
 
-  .swowroom__input {
+  .showroom__input {
     height: 41px;
   }
 

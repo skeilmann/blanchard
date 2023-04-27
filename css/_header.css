@@ -36,7 +36,8 @@
   margin: auto 0;
   margin-right: 50px;
   gap: 5px 62.5px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  overflow-y: auto;
 }
 
 .header__link {

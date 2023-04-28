@@ -11,6 +11,27 @@
   height: 40px;
   padding-left: 15px;
   padding-top: 2px;
+  overflow: hidden;
+}
+
+.gallery__select-wrap .choices__inner::before {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 0 0);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 200%;
+  background-size: 200%;
+  transition: background-size .4s, background-position .4s;
+}
+
+.gallery__select-wrap .choices__inner:hover::before {
+  background-position: 100%;
+  background-size: 200% 100%;
+  transition: background-size .4s, background-position .4s;
 }
 
 
@@ -52,6 +73,16 @@
   padding-right: 0;
 }
 
+.gallery__select-wrap .choices__list--dropdown:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--light-gray);
+
+}
+
 .gallery__select-wrap .choices__list--dropdown {
   border: 1px solid gray;
   border-radius: 5px;
@@ -60,10 +91,10 @@
 .gallery__select-wrap .choices__list--dropdown .choices__item,
 .gallery__select-wrap .choices__list[aria-expanded] .choices__item {
   margin-bottom: 0;
-  padding: 0;
+  padding-right: 20px;
   padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 20px;
+  padding-bottom: 4px;
+  padding-left: 17px;
 }
 
 .gallery__select-wrap .choices__list--single .choices__item:hover {

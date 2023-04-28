@@ -43,8 +43,8 @@
 }
 
 .project__subtitle {
-  /* margin-top: 21px; */
-  margin-bottom: 21px;
+  margin-top: 0;
+  margin-bottom: 22px;
   font-size: 24px;
   font-weight: 600;
 }
@@ -154,11 +154,16 @@
   .project__swiper {
     height: 107px;
   }
+
+  .project__container {
+    padding-bottom: 82px;
+  }
 }
 
 @media (max-width: 600px) {
   .project__container {
     padding-bottom: 28px;
+    padding-top: 25px;
   }
 
   .project__desc {

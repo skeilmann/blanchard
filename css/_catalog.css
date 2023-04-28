@@ -10,12 +10,13 @@
 
 .catalog__wrap {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 50px;
 }
 
 .catalog__left {
   flex-shrink: 0;
-  width: calc(50% - 25px);
+  width: calc(50% - 50px);
 }
 
 .catalog__card {
@@ -55,7 +56,7 @@
 }
 
 .catalog__right {
-  width: calc(50% - 25px);
+  /* width: calc(50% - 25px); */
 }
 
 .catalog__item {
@@ -80,12 +81,14 @@
 .catalog__artist {
   width: 100%;
   margin: 25px 0;
-
   column-count: 3;
+  column-gap: 5px;
 }
 
 .btn-text {
   transition: color, background-color .3s;
+  width: 90%;
+  display: block;
 }
 
 .catalog__btn:focus-visible:not(:active) .btn-text {
@@ -216,8 +219,24 @@
 }
 
 @media (max-width: 1500px) {
-  .catalog__artist-name {
-    width: 50%;
+  .catalog__desc {
+    margin-bottom: 39px;
+  }
+
+  .catalog__left {
+    width: calc(50% - 25px);
+  }
+
+  .catalog__card-img {
+    margin-bottom: 20px;
+  }
+
+  .catalog__artist {
+    column-count: 2;
+  }
+
+  .catalog__card-name {
+    margin-bottom: 10px;
   }
 }
 
@@ -233,9 +252,8 @@
   }
 
   .catalog__right {
-    /* order: 1; */
     width: 100%;
-    padding-bottom: 51px;
+    padding-bottom: 1px;
   }
 
   .catalog__desc {
@@ -246,8 +264,8 @@
     width: 100%;
   }
 
-  .catalog__artist-name {
-    width: 33%;
+  .catalog__artist {
+    column-count: 3;
   }
 
   .catalog__card-img {
@@ -270,6 +288,14 @@
 }
 
 @media (max-width: 500px) {
+  .catalog__container {
+    padding-bottom: 28px;
+  }
+
+  .catalog__artist {
+    column-count: 1;
+  }
+
   .catalog__artist-name {
     width: 100%;
   }

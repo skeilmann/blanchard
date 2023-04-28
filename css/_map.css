@@ -123,3 +123,9 @@
 .ymaps-2-1-79-controls__control {
   top: 270px !important;
 }
+
+@media (max-width: 400px) {
+  #myMap1 {
+    height: 320px;
+  }
+}

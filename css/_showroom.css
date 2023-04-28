@@ -164,16 +164,17 @@ address {
 }
 
 @media (max-width: 1200px) {
+  .showroom__container {
+    padding-bottom: 13px;
+  }
+
   .showroom__container>div:not(:last-child) {
     margin-right: 0;
+    margin-bottom: 23px;
   }
 
   .showroom__btn {
     padding: 12px 40px;
-  }
-
-  .showroom__container>div:not(:last-child) {
-    margin-bottom: 23px;
   }
 
   .showroom__subtitle {
@@ -186,6 +187,14 @@ address {
 
   .showroom .showroom__col-center {
     margin-bottom: 30px;
+  }
+
+  .showroom__col-right {
+    margin-top: 7px;
+  }
+
+  .showroom__subtitle--2 {
+    margin-bottom: 6px;
   }
 }
 
@@ -226,6 +235,7 @@ address {
 
   .showroom__container {
     padding-top: 21px;
+    padding-bottom: 18px;
   }
 
   .showroom__subtitle {
@@ -265,6 +275,10 @@ address {
     margin-bottom: 22px;
   }
 
+  .showroom__col-right {
+    margin-top: 0;
+  }
+
   .showroom__col-right .showroom__subtitle {
     font-weight: 400;
   }
@@ -277,4 +291,10 @@ address {
   .showroom__col-right .showroom__subtitle {
     margin-bottom: 9px;
   }
+
+  .showroom__subtitle--2 {
+    padding-top: 1px;
+  }
+
+
 }

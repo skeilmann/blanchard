@@ -127,8 +127,9 @@
 
 .header__nav2 {
   display: flex;
-  justify-content: space-between;
   width: 100%;
+  gap: 87px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 1200px) {

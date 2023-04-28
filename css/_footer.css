@@ -57,6 +57,23 @@
 }
 
 
+@media (max-width: 1200px) {
+  .footer__container {
+    padding: 40px 50px;
+  }
+
+  .footer__container .logo {
+    padding-top: 11px;
+  }
+
+  .footer__social-link {
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 @media (max-width: 600px) {
   .footer__container {
     padding-top: 19px;
@@ -79,5 +96,9 @@
     background-size: cover;
     width: 50px;
     height: 50px;
+  }
+
+  .footer__container .logo {
+    padding-top: 0;
   }
 }

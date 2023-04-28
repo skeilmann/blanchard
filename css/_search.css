@@ -1,9 +1,9 @@
 .header__search-container {
   position: relative;
   display: flex;
+  overflow: hidden;
   align-items: center;
   margin-left: auto;
-  overflow: hidden;
 }
 
 .header__search-form {
@@ -23,6 +23,7 @@
   outline: none;
   background: transparent;
   transition: border-color var(--short);
+
   caret-color: rgba(255, 255, 255, .85);
 }
 
@@ -66,16 +67,16 @@
 .header__search-btn {
   width: 27px;
   height: 27px;
-  padding: 0;
   margin-right: 10px;
+  padding: 0;
   border: none;
   background: none;
   background-image: url("data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='6.8678' height='1.71695' transform='matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6533)' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z' fill='white'/%3E%3C/svg%3E%0A");
-  ;
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
+  background-size: contain;
   transition: background-image .3s;
+  ;
 }
 
 .header__search-btn:focus:not(:active) {
@@ -114,10 +115,10 @@
   }
 
   .header__row-2 {
-    transform: scaleX(0);
-    background-color: black;
     z-index: 100;
     height: 100px;
+    background-color: black;
+    transform: scaleX(0);
   }
 
   .header__search-btn {
@@ -131,15 +132,15 @@
   }
 
   .header__row-2.is-opened {
-    transform: translateX(0);
     transition: transform .3s;
+    transform: translateX(0);
     animation-name: search-open;
     animation-duration: 1s;
   }
 
   .is-opened .header__search-input {
-    opacity: 1;
     width: 218px;
+    opacity: 1;
   }
 
   .is-opened .header__search-input::placeholder {
@@ -148,7 +149,7 @@
 
   .is-opened .header__delete-btn {
     display: flex;
-    transition: color 0.3s;
+    transition: color .3s;
   }
 
   .is-closed .header__delete-btn {
@@ -158,7 +159,6 @@
   .header__delete-btn:active {
     outline: none;
     background-color: transparent;
-
   }
 
   .header__row-2.is-closed {
@@ -184,8 +184,8 @@
   }
 
   .header__search-form {
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
   }
 
   .is-opened .header__search-input {
@@ -208,8 +208,8 @@
   }
 
   .header__delete-btn {
-    font-size: 30px;
     width: 16px;
     height: 16px;
+    font-size: 30px;
   }
 }

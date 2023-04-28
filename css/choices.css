@@ -4,7 +4,6 @@
 .choices {
   position: relative;
   margin-left: -8px;
-  /* transition: background-color .5s; */
   background-image: linear-gradient(var(--acc) 0 0);
   background-repeat: no-repeat;
   background-position: 200%;
@@ -154,12 +153,12 @@
   background: var(--white);
 }
 
-.choices__list[aria-expanded='false'] {
+.choices__list[aria-expanded="false"] {
   pointer-events: none;
 }
 
 .is-active.choices__list--dropdown,
-.is-active.choices__list[aria-expanded='true'] {
+.is-active.choices__list[aria-expanded="true"] {
   opacity: 1;
   transform: translateY(0);
   pointer-events: all;

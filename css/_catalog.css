@@ -10,7 +10,6 @@
 
 .catalog__wrap {
   display: flex;
-  /* justify-content: space-between; */
   gap: 50px;
 }
 
@@ -55,10 +54,6 @@
   color: var(--dark-gray);
 }
 
-.catalog__right {
-  /* width: calc(50% - 25px); */
-}
-
 .catalog__item {
   border: none;
 }
@@ -81,14 +76,15 @@
 .catalog__artist {
   width: 100%;
   margin: 25px 0;
+
   column-count: 3;
   column-gap: 5px;
 }
 
 .btn-text {
-  transition: color, background-color .3s;
-  width: 90%;
   display: block;
+  width: 90%;
+  transition: color, background-color .3s;
 }
 
 .catalog__btn:focus-visible:not(:active) .btn-text {

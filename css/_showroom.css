@@ -49,8 +49,8 @@ address {
 }
 
 .showroom__label {
-  width: 269px;
   position: relative;
+  width: 269px;
 }
 
 .showroom__input {
@@ -110,6 +110,7 @@ address {
 
 .showroom__icons {
   display: flex;
+
   gap: 20px;
 }
 
@@ -295,6 +296,4 @@ address {
   .showroom__subtitle--2 {
     padding-top: 1px;
   }
-
-
 }

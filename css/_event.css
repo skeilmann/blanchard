@@ -12,10 +12,10 @@
 }
 
 .swiper-3 .swiper-slide {
-  cursor: auto;
   overflow: auto;
   flex-grow: 1;
   height: auto;
+  cursor: auto;
 }
 
 .event .pagination {
@@ -32,8 +32,8 @@
   width: 50px;
   height: 50px;
   background-color: var(--light-gray2);
-  pointer-events: all;
   transition: background-color .3s;
+  pointer-events: all;
 }
 
 .event .swiper-nav-btn::after {
@@ -63,7 +63,6 @@
 
 .event__swiper .swiper-button-disabled {
   pointer-events: none;
-  visibility: hidden;
 }
 
 .event__card {
@@ -75,23 +74,20 @@
 
 .event__img {
   margin: 0;
+
   object-fit: contain;
 }
 
 .event__about {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   padding: 14px 49px 40px;
   border: 1px solid var(--light-gray3);
   border-top: none;
-  display: flex;
-  flex-direction: column;
-  /* height: 100%; */
-  /* overflow: hidden; */
-  flex-grow: 1;
-
 }
 
 .event__about p {
-  /* overflow: hidden; */
   margin-bottom: 66px;
 }
 
@@ -192,9 +188,9 @@
 
 @media (max-width: 1200px) {
   .swiper-3-pagination {
-    padding-top: 30px;
     display: flex;
     justify-content: center;
+    padding-top: 30px;
   }
 
   .swiper-pagination-bullet {
@@ -215,15 +211,11 @@
     margin-bottom: 24px;
   }
 
-  /*
-  .event__card {
-    height: 683px;
-  } */
-
   .event__img {
-    object-fit: cover;
-    height: 200px;
     flex-shrink: 0;
+    height: 200px;
+
+    object-fit: cover;
   }
 
   .event__subtitle {
@@ -278,17 +270,17 @@
   }
 
   .event__desc {
-    font-weight: 400;
     font-size: 16px;
+    font-weight: 400;
     line-height: 32px;
   }
 
   .event__more {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 32px;
     position: relative;
     left: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
   }
 
   .swiper-3-pagination {

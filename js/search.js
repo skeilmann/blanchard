@@ -44,7 +44,7 @@ function setSearch(params) {
 
 setSearch({
   openBtnClass: "js-open-search", // класс кнопки открытия
-  closeBtnClass: "nav__delete-btn", // класс кнопки закрытия
+  closeBtnClass: "header__delete-btn", // класс кнопки закрытия
   searchClass: "js-form", // класс формы поиска
   activeClass: "is-opened", // класс открытого состояния
   hiddenClass: "is-closed" // класс закрывающегося состояния (удаляется сразу после закрытия)

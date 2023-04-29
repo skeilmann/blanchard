@@ -64,7 +64,6 @@
 .main__dropdown {
   position: absolute;
   top: 45px;
-  left: 6px;
   display: none;
   padding: 40px 20px 40px 40px;
   background-color: rgba(0, 0, 0, .6);

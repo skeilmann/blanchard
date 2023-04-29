@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     errorLabelStyle: {
       color: "#D11616",
       position: "absolute",
-      top: "-20px",
+      top: "-18px",
     },
     focusInvalidField: true,
     lockForm: true,

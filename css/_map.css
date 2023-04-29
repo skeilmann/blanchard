@@ -119,4 +119,8 @@
   #myMap1 {
     height: 320px;
   }
+
+  .ymaps-2-1-79-controls__control {
+    display: none;
+  }
 }

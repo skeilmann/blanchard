@@ -46,6 +46,7 @@
 
 .swiper-button-disabled {
   pointer-events: none;
+
 }
 
 .event .swiper-nav-btn:focus-visible {
@@ -63,6 +64,7 @@
 
 .event__swiper .swiper-button-disabled {
   pointer-events: none;
+  visibility: hidden;
 }
 
 .event__card {

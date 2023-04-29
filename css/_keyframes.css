@@ -1,7 +1,7 @@
 @keyframes fade-in {
   from {
-    opacity: 0.5;
-    transform: scale(0.9);
+    opacity: .5;
+    transform: scale(.9);
   }
 
   to {
@@ -12,22 +12,38 @@
 
 @keyframes search-open {
   from {
-    transform: scaleX(0);
     opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right;
   }
+
   to {
-    transform: scaleX(1);
     opacity: 1;
+    transform: scaleX(1);
+    transform-origin: right;
   }
 }
 
 @keyframes search-close {
   from {
-    transform: scaleX(1);
     opacity: 1;
+    transform: scaleX(1);
+    transform-origin: right;
   }
+
   to {
-    transform: scaleX(0);
     opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
   }
 }

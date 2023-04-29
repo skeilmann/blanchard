@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   padding-top: 36px;
   padding-bottom: 37px;
-  padding-bottom: 20px;
+  padding-bottom: 6px;
 }
 
 .showroom__container>div:not(:last-child) {
@@ -49,10 +49,11 @@ address {
 }
 
 .showroom__label {
+  position: relative;
   width: 269px;
 }
 
-.swowroom__input {
+.showroom__input {
   width: 100%;
   height: 50px;
   padding: 9px 24px;
@@ -65,11 +66,11 @@ address {
   color: var(--light-gray);
 }
 
-.swowroom__input:hover:not(:focus) {
+.showroom__input:hover:not(:focus) {
   background-color: var(--light-gray2);
 }
 
-.swowroom__input:focus {
+.showroom__input:focus {
   outline: none;
 }
 
@@ -109,6 +110,7 @@ address {
 
 .showroom__icons {
   display: flex;
+
   gap: 20px;
 }
 
@@ -136,14 +138,14 @@ address {
 }
 
 .icon--wa {
-  background-image: url("../img/1920/icon--wa.jpg");
+  background-image: url("../img/1920/icon--wa.webp");
 }
 
 .icon--tg {
-  background-image: url("../img/1920/icon--tg.jpg");
+  background-image: url("../img/1920/icon--tg.webp");
 }
 
-.swowroom__input.is-invalid:not(:focus) {
+.showroom__input.is-invalid:not(:focus) {
   border-color: #d11616;
   color: var(--light-gray);
 }
@@ -163,16 +165,17 @@ address {
 }
 
 @media (max-width: 1200px) {
+  .showroom__container {
+    padding-bottom: 13px;
+  }
+
   .showroom__container>div:not(:last-child) {
     margin-right: 0;
+    margin-bottom: 23px;
   }
 
   .showroom__btn {
     padding: 12px 40px;
-  }
-
-  .showroom__container>div:not(:last-child) {
-    margin-bottom: 23px;
   }
 
   .showroom__subtitle {
@@ -185,6 +188,14 @@ address {
 
   .showroom .showroom__col-center {
     margin-bottom: 30px;
+  }
+
+  .showroom__col-right {
+    margin-top: 7px;
+  }
+
+  .showroom__subtitle--2 {
+    margin-bottom: 6px;
   }
 }
 
@@ -225,6 +236,7 @@ address {
 
   .showroom__container {
     padding-top: 21px;
+    padding-bottom: 18px;
   }
 
   .showroom__subtitle {
@@ -232,7 +244,7 @@ address {
     font-size: 18px;
   }
 
-  .swowroom__input {
+  .showroom__input {
     height: 41px;
   }
 
@@ -264,6 +276,10 @@ address {
     margin-bottom: 22px;
   }
 
+  .showroom__col-right {
+    margin-top: 0;
+  }
+
   .showroom__col-right .showroom__subtitle {
     font-weight: 400;
   }
@@ -275,5 +291,9 @@ address {
 
   .showroom__col-right .showroom__subtitle {
     margin-bottom: 9px;
+  }
+
+  .showroom__subtitle--2 {
+    padding-top: 1px;
   }
 }

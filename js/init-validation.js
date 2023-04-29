@@ -8,13 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
     errorLabelStyle: {
       color: "#D11616",
       position: "absolute",
+      top: "-18px",
     },
     focusInvalidField: true,
     lockForm: true,
   });
+  const selector = document.querySelector("input[type='tel']");
+  const im = new Inputmask("+7 (999)-999-99-99");
+  im.mask(selector);
 
   validation
-    .addField(".swowroom__input--name", [
+    .addField(".showroom__input--name", [
       {
         rule: "minLength",
         value: 3,
@@ -30,10 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
         errorMessage: "Вы не ввели имя",
       },
     ])
-    .addField(".swowroom__input--tel", [
+
+    .addField('.showroom__input--tel', [
       {
-        rule: 'number',
-        errorMessage: "Недопустимый формат",
+        rule: "function",
+        validator: function (name, value) {
+          const phone = selector.inputmask.unmaskedvalue();
+          return phone.length === 10
+        },
+        errorMessage: 'Не достаточное количество символов',
       },
       {
         rule: "required",

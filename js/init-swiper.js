@@ -5,8 +5,9 @@ const swiper1 = new Swiper('.swiper-1', {
   direction: 'horizontal',
   loop: true,
   autoplay: {
-    delay: 5000,
+    delay: 10000,
   },
+  speed: 10000,
   effect: 'fade',
   fadeEffect: {
     crossFade: true
@@ -128,6 +129,10 @@ const swiper4 = new Swiper('.swiper-4', {
     700: {
       slidesPerView: 2,
       spaceBetween: 34,
+    },
+
+    900: {
+      spaceBetween: 47,
     },
 
     1200: {

@@ -1,13 +1,12 @@
-.nav__search-container {
+.header__search-container {
   position: relative;
   display: flex;
-  align-items: center;
-  /* height: 24px; */
-  margin-left: auto;
   overflow: hidden;
+  align-items: center;
+  margin-left: auto;
 }
 
-.nav__search-form {
+.header__search-form {
   position: relative;
   z-index: 70;
   display: flex;
@@ -15,7 +14,7 @@
   width: 252px;
 }
 
-.nav__search-input {
+.header__search-input {
   width: 100%;
   padding-bottom: 6px;
   border: none;
@@ -28,7 +27,7 @@
   caret-color: rgba(255, 255, 255, .85);
 }
 
-.nav__search-input::placeholder {
+.header__search-input::placeholder {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -40,19 +39,19 @@
   color: rgba(255, 255, 255, .85);
 }
 
-.nav__search-input:focus-within::placeholder {
+.header__search-input:focus-within::placeholder {
   color: transparent;
 }
 
-.nav__search-input:focus-within {
+.header__search-input:focus-within {
   border-color: var(--dark-acc);
 }
 
-.nav__search-input:hover {
+.header__search-input:hover {
   border-color: var(--light-acc2);
 }
 
-.nav__search-input:active {
+.header__search-input:active {
   border-color: var(--acc);
 }
 
@@ -65,27 +64,34 @@
   color: rgba(255, 255, 255, .85);
 }
 
-.nav__search-btn {
+.header__search-btn {
   width: 27px;
   height: 27px;
-  padding: 0;
   margin-right: 10px;
+  padding: 0;
   border: none;
   background: none;
-  background-image: url("../img/search.svg");
+  background-image: url("data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='6.8678' height='1.71695' transform='matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6533)' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z' fill='white'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
-  /* transition: color var(--short); */
+  background-size: contain;
+  transition: background-image .3s;
+  ;
 }
 
-.nav__search-btn:focus {
+.header__search-btn:focus:not(:active) {
   outline: none;
 }
 
-.nav__delete-btn {
-  /* position: absolute;
-  right: 0; */
+.header__search-btn:active {
+  background-image: url("data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='6.8678' height='1.71695' transform='matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6533)' fill='%237943a4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z' fill='%237943a4'/%3E%3C/svg%3E%0A");
+}
+
+.header__search-btn:hover {
+  background-image: url("data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='6.8678' height='1.71695' transform='matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6533)' fill='%239d5cd0'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z' fill='%239d5cd0'/%3E%3C/svg%3E%0A");
+}
+
+.header__delete-btn {
   display: none;
   width: 30px;
   height: 30px;
@@ -109,57 +115,66 @@
   }
 
   .header__row-2 {
-    transform: scaleX(0);
-    background-color: black;
     z-index: 100;
     height: 100px;
+    background-color: black;
+    transform: scaleX(0);
   }
 
-  .nav__search-btn {
+  .header__search-btn {
     margin: 0;
     cursor: pointer;
   }
 
-  .nav__search-input {
+  .header__search-input {
     opacity: 0;
     transition: opacity .3s;
   }
 
   .header__row-2.is-opened {
-    transform: translateX(0);
     transition: transform .3s;
+    transform: translateX(0);
+    animation-name: search-open;
+    animation-duration: 1s;
   }
 
-  .is-opened .nav__search-input {
-    opacity: 1;
+  .is-opened .header__search-input {
     width: 218px;
+    opacity: 1;
   }
 
-  .is-opened .nav__search-input::placeholder {
+  .is-opened .header__search-input::placeholder {
     color: transparent;
   }
 
-  .is-opened .nav__delete-btn {
+  .is-opened .header__delete-btn {
     display: flex;
+    transition: color .3s;
   }
 
-  .is-closed .nav__delete-btn {
+  .is-closed .header__delete-btn {
     display: none;
   }
 
-  .nav__delete-btn:active {
+  .header__delete-btn:active {
     outline: none;
     background-color: transparent;
-
   }
 
   .header__row-2.is-closed {
-    transform: translateX(120%);
+    animation-name: search-close;
+    animation-duration: 1s;
+    /* transform: translateX(120%); */
   }
 
-  .is-closed .nav__search-input {
+  .is-closed .header__search-input {
     opacity: 0;
     pointer-events: none;
+  }
+
+  .header__delete-btn:hover {
+    color: var(--acc);
+    transition: color .3s;
   }
 }
 
@@ -168,35 +183,33 @@
     width: 100%;
   }
 
-  .nav__search-form {
-    width: 100%;
-    /* width: 300px; */
+  .header__search-form {
     justify-content: space-between;
+    width: 100%;
   }
 
-  .is-opened .nav__search-input {
+  .is-opened .header__search-input {
     width: 80%;
   }
 
-  .nav__search-container {
+  .header__search-container {
     width: 100%;
   }
 }
 
 @media (max-width: 500px) {
-
   .header__row-2 {
     height: 45px;
   }
 
-  .nav__search-btn {
+  .header__search-btn {
     width: 18px;
     height: 18px;
   }
 
-  .nav__delete-btn {
-    font-size: 30px;
+  .header__delete-btn {
     width: 16px;
     height: 16px;
+    font-size: 30px;
   }
 }

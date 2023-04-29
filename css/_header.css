@@ -129,7 +129,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 20px 87px;
+  /* gap: 20px 87px; */
+  justify-content: space-between;
 }
 
 @media (max-width: 1200px) {

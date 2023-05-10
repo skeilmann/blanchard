@@ -1,4 +1,4 @@
-const firstParams2 = {
+const firstParams = {
   tabsClass: "js-link",
   wrap: "js-catalog-wrap",
   content: "js-catalog-content",

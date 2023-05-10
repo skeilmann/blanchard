@@ -28,7 +28,7 @@
 }
 
 .ac:first-of-type .ac-trigger {
-  border-top: 1px solid var(--light-gray3);
+  /* border-top: 1px solid var(--light-gray3); */
 }
 
 .ac:first-of-type .ac-trigger:hover {

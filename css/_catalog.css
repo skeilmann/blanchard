@@ -82,8 +82,8 @@
 }
 
 .btn-text {
-  display: block;
-  width: 90%;
+  display: inline-block;
+  /* width: 90%; */
   transition: color, background-color .3s;
 }
 

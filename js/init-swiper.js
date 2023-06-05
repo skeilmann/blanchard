@@ -9,9 +9,7 @@ const swiper1 = new Swiper('.swiper-1', {
   },
   speed: 10000,
   effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
+  preventInteractionOnTransition: 'true',
 });
 
 const swiper2 = new Swiper('.swiper-2', {

@@ -1,36 +1,39 @@
-const firstParams = {
-  tabsClass: "js-link",
-  wrap: "js-catalog-wrap",
-  content: "js-catalog-content",
-  active: "active"
-};
+(() => {
+  const firstParams = {
+    tabsClass: "js-link",
+    wrap: "js-catalog-wrap",
+    content: "js-catalog-content",
+    active: "active"
+  };
 
-function setTabs(params) {
-  const tabBtns = document.querySelectorAll(`.${params.tabsClass}`);
+  function setTabs(params) {
+    const tabBtns = document.querySelectorAll(`.${params.tabsClass}`);
 
-  function onTabClick(e) {
-    e.preventDefault();
-    const path = e.target.dataset.path;
-    const wrap = e.target.closest(`.${params.wrap}`);
-    const currentContent = wrap.querySelector(`.${params.content}[data-target="${path}"]`);
-    const contents = wrap.querySelectorAll(`.${params.content}`);
+    function onTabClick(e) {
+      e.preventDefault();
+      const path = e.target.dataset.path;
+      const wrap = e.target.closest(`.${params.wrap}`);
+      const currentContent = wrap.querySelector(`.${params.content}[data-target="${path}"]`);
+      const contents = wrap.querySelectorAll(`.${params.content}`);
 
-    contents.forEach((el) => {
-      el.classList.remove(params.active);
+      contents.forEach((el) => {
+        el.classList.remove(params.active);
+      });
+
+      currentContent.classList.add(params.active);
+
+      tabBtns.forEach((el) => {
+        el.classList.remove(params.active);
+      });
+
+      this.classList.add(params.active);
+    }
+
+    tabBtns.forEach(function (el) {
+      el.addEventListener("click", onTabClick);
     });
-
-    currentContent.classList.add(params.active);
-
-    tabBtns.forEach((el) => {
-      el.classList.remove(params.active);
-    });
-
-    this.classList.add(params.active);
   }
 
-  tabBtns.forEach(function (el) {
-    el.addEventListener("click", onTabClick);
-  });
-}
+  setTabs(firstParams);
+})();
 
-setTabs(firstParams2);
